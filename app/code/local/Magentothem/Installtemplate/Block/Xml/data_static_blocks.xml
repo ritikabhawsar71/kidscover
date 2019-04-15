@@ -1,0 +1,196 @@
+<?xml version="1.0"?>
+<flaton>
+    <blocks>
+        <block>
+            <title>Block Header</title>
+            <identifier>block_header</identifier>
+            <content>
+                    <![CDATA[<div class="email"><label>Email:</label> support@plazathemes.com</div>
+<div class="phone"><label>Call support free:</label>123 456 789</div>]]>
+            </content>
+            <is_active>1</is_active>
+        </block> 
+         
+        <block>
+            <title>Banner Left</title>
+            <identifier>banner_left</identifier>
+            <content>
+                   <![CDATA[
+				  <div class="banner-left"><a href="accessories.html"><img alt="" src="{{media url="wysiwyg/banner_left.jpg"}}" /></a></div>
+				   ]]>
+            </content>
+            <is_active>1</is_active>
+        </block>
+ 
+        <block>
+            <title>Footer Static</title>
+            <identifier>footer_static</identifier>
+            <content>
+                 <![CDATA[<div class="row">
+<div class="col-md-3 col-sm-6 col-sms-6 col-smb-12">
+<div class="f-col f-col1">
+<div class="footer-title">
+<h2>about us</h2>
+</div>
+<div class="footer-content">
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt...</p>
+<div class="link-web">
+<ul>
+<li><a class="face" href="#">face</a></li>
+<li><a class="twitter" href="#">twitter</a></li>
+<li><a class="rss" href="#">rss</a></li>
+<li><a class="google" href="#">google</a></li>
+<li><a class="print" href="#">print</a></li>
+</ul>
+</div>
+<div class="payment"><img alt="" src="{{media url="wysiwyg/payment.png"}}" /></div>
+</div>
+</div>
+</div>
+<div class="col-md-3 col-sm-6 col-sms-6 col-smb-12">
+<div class="f-col f-col2">
+<div class="footer-title">
+<h2>my account</h2>
+</div>
+<div class="footer-content">
+<ul>
+<li class="first"><a href="{{store direct_url="customer/account/"}}">My Account</a></li>
+<li><a href="{{store direct_url="customer/account/login/"}}">login</a></li>
+<li><a href="{{store direct_url="checkout/cart/"}}">my cart</a></li>
+<li><a href="{{store direct_url="wishlist/index/index/"}}">wishlist</a></li>
+<li class="last"><a href="{{store direct_url="checkout/cart/"}}">checkout</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-3 col-sm-6 col-sms-6 col-smb-12">
+<div class="f-col f-col3">
+<div class="footer-title">
+<h2>contact us</h2>
+</div>
+<div class="footer-content">
+<ul>
+<li class="first"><a href="{{store direct_url="about-magento-demo-store"}}">about us</a></li>
+<li><a href="{{store direct_url="blog"}}">blog</a></li>
+<li><a href="{{store direct_url="contacts/"}}">contact us</a></li>
+<li><a href="{{store direct_url="privacy-policy-cookie-restriction-mode"}}">privacy policy</a></li>
+<li class="last"><a href="{{store direct_url="catalog/seo_sitemap/category/"}}">site map</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-3 col-sm-6 col-sms-6 col-smb-12">
+<div class="f-col f-col4">
+<div class="footer-title">
+<h2>contact-infor</h2>
+</div>
+<div class="footer-content"><span class="address icon"> Address: 123 Main Street, Anytown,CA 12345 USA. </span> <span class="phone icon"> (400) 123 456 789<br /> (400) 123 456 789 </span> <span class="email icon"> demo@plazathemes.com </span></div>
+</div>
+</div>
+</div>]]>
+            </content>
+            <is_active>1</is_active>
+        </block>
+		
+		<block>
+            <title>Static Contacts</title>
+            <identifier>static_contacts</identifier>
+            <content>
+                   <![CDATA[
+				  <div class="map-contacts"><iframe style="border: 0;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6997169.075258479!2d-99.09065332845108!3d31.093428132571923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c19f77b45974b%3A0xb9ec9ba4f647678f!2zRGFsbGFzLCBUZXhhcywgSG9hIEvhu7M!5e0!3m2!1svi!2s!4v1419306684089" height="300" width="100%"></iframe></div>
+				   ]]>
+            </content>
+            <is_active>1</is_active>
+        </block>
+		
+		<block>
+            <title>Home4 Banner Static 1</title>
+            <identifier>banner_static1</identifier>
+            <content>
+                   <![CDATA[
+				  <div class="static-timer"><img alt="" src="{{media url="wysiwyg/home4_static1.jpg"}}" />
+<div class="text">
+<h1>PENTAX K-01</h1>
+<h2>sale up to 40% off</h2>
+<h3>from $45.00</h3>
+</div>
+</div>
+				   ]]>
+            </content>
+            <is_active>1</is_active>
+        </block>
+		
+		<block>
+            <title>Home4 Banner Static 2</title>
+            <identifier>banner_static2</identifier>
+            <content>
+                   <![CDATA[
+				  <div class="static-mostview"><img alt="" src="{{media url="wysiwyg/home4_static2.jpg"}}" /></div>
+				   ]]>
+            </content>
+            <is_active>1</is_active>
+        </block>
+		
+		<block>
+            <title>Banner Right</title>
+            <identifier>banner_right</identifier>
+            <content>
+                   <![CDATA[
+				  <div class="banner-right">
+<div class="box box1">
+<div class="text">
+<div class="text-inner">
+<h2>FREE SHIPPING</h2>
+<p>Free on all products</p>
+</div>
+</div>
+</div>
+<div class="box box2">
+<div class="text">
+<div class="text-inner">
+<h2>free return</h2>
+<p>Return for free within</p>
+</div>
+</div>
+</div>
+<div class="box box3">
+<div class="text">
+<div class="text-inner">
+<h2>Daily updates</h2>
+<p>Update promotion 24/24</p>
+</div>
+</div>
+</div>
+<div class="box box4">
+<div class="text">
+<div class="text-inner">
+<h2>Support 24/7</h2>
+<p>(+1)866-540-3229</p>
+</div>
+</div>
+</div>
+</div>
+				   ]]>
+            </content>
+            <is_active>1</is_active>
+        </block>
+		
+		<block>
+            <title>Menu Links</title>
+            <identifier>pt_menu_links</identifier>
+            <content>
+                   <![CDATA[
+				  <ul>
+<li class="first"><a href="{{store direct_url="about-magento-demo-store"}}">about us</a></li>
+<li><a href="{{store direct_url="contacts/"}}">contact us</a></li>
+<li><a href="{{store direct_url="catalog/seo_sitemap/category/"}}">Site Map</a></li>
+<li class="last"><a href="{{store direct_url="blog"}}">blog</a></li>
+</ul>
+				   ]]>
+            </content>
+            <is_active>1</is_active>
+        </block>
+    </blocks>
+
+</flaton>
+

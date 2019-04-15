@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Notive_Ewarehousing>
+      <active>true</active>
+      <codePool>local</codePool>
+      <version>2.2.5</version>
+    </Notive_Ewarehousing>
+  </modules>
+</config>

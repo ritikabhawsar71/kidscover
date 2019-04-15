@@ -1,0 +1,208 @@
+<?xml version="1.0"?>
+<config>
+    <tabs>
+        <magentothem translate="label" module="magentothem_quickview">
+            <label>Magentothem</label>
+            <sort_order>205</sort_order>
+        </magentothem>
+    </tabs>
+    <sections>
+        <quickview translate="label" module="magentothem_quickview">
+            <label>Product Quick View</label>
+            <tab>magentothem</tab>
+            <sort_order>557</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <quickview_config translate="label">
+                    <label>General Configuration</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <enabled translate="label">
+                            <label>Enable Product Quick View</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enabled>
+                        <image_upload translate='label'>
+                            <label>Ajax load Image</label>
+                            <frontend_type>image</frontend_type>
+                            <backend_model>adminhtml/system_config_backend_image</backend_model>
+                            <upload_dir config="system/filesystem/media" scope_info="1">magentothem</upload_dir>
+                            <base_url type="media" scope_info="1">magentothem</base_url>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </image_upload>
+                        <category_enabled>
+                            <label>Enable Quick View in Category</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </category_enabled>
+                        <element_container>
+                            <label>Elements that contain Quick View</label>
+                            <frontend_type>textarea</frontend_type>
+                            <comment>
+                                <![CDATA[
+                                    Enter the classnames (or the ids) of containers (div) which would have Quick View. <br/>
+                                    <strong>Format:</strong> {classname1};{classname2};{classname3};.... (can use id). <br />
+                                    <strong>Example: .list-example1;.list-example2;#list-example3</strong>
+                                ]]>
+                            </comment>
+                            <sort_order>7</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </element_container>
+                        <parent_element>
+                            <label>Classname of Parent Element: </label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>11</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </parent_element>
+                        <children_element>
+                            <label>Classname of Children Element: </label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>15</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </children_element>
+                    </fields>
+                </quickview_config>
+                <media_config translate="label">
+                    <label>Thumbnail Media Configuration</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>3</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <width_main_image translate="label">
+                            <label>Width of Image: </label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>11</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </width_main_image>
+                        <height_main_image translate="label">
+                            <label>Height of Image: </label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>12</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </height_main_image>
+                        <auto translate="label comment">
+                            <label>Auto slide: </label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </auto>
+                        <speed translate="label">
+                            <label>Slide Speed: </label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>16></sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_store>1</show_in_store>
+                            <show_in_website>1</show_in_website>
+                        </speed>
+                        <itemsDefault translate="label">
+                            <label>Items Default: </label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>26</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </itemsDefault>
+                        <itemsDesktop translate="label">
+                            <label>Items On Desktop: </label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>27</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </itemsDesktop>
+                        <itemsDesktopSmall translate="label">
+                            <label>Items On Desktop Small: </label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>28</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </itemsDesktopSmall>
+                        <itemsTablet translate="label">
+                            <label>Items On Tablet: </label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>29</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </itemsTablet>
+                        <itemsMobile translate="label">
+                            <label>items On Mobile: </label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>31</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </itemsMobile>
+                        <width_thumbnail translate="label">
+                            <label>Width of Thumbnail: </label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>38</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </width_thumbnail>
+                        <height_thumbnail translate="label">
+                            <label>Height of Thumbnail: </label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </height_thumbnail>
+                        <next_back translate="label">
+                            <label>Show Next/Back control: </label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>42</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </next_back>
+                        <nav_ctrl translate="label">
+                            <label>Show navigation control: </label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>44</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </nav_ctrl>
+                    </fields>
+                </media_config>
+            </groups>
+        </quickview>
+    </sections>
+</config>

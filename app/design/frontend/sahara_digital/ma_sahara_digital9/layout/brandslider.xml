@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+        <reference name="head">         
+        </reference>
+        <reference name="blog">
+            <!--<block type="brandslider/brandslider" name="brandslider" template="magentothem/brandslider/brandslider.phtml" />-->
+            <block type="brandslider/brandslider" name="brand.slider">
+                <action method="setTemplate" ifconfig="brandslider/brandslider_config/enabled"><template>magentothem/brandslider/brandslider.phtml</template></action>
+            </block>
+        </reference>
+    </default>
+</layout> 

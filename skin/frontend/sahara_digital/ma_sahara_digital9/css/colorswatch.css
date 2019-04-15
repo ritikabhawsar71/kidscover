@@ -1,0 +1,22 @@
+.product-image-gallery .gallery-image.visible{
+    display: block;
+}
+.product-img-box .product-image img{
+    display: none;
+}
+/*
+.configurable-swatch-list .not-available .x {
+    display: block;
+}
+.swatch-link .x {
+    background: url('../images/bg_x.png') no-repeat scroll center center transparent;
+    bottom: 0;
+    display: none;
+    left: 0;
+    position: absolute;
+    right: 0;
+    text-indent: -999em;
+    top: 0;
+    z-index: 10;
+}
+*/

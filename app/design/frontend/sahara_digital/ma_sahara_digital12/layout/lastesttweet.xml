@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default> 
+        <reference name="left">
+            <!-- <block type="core/template" name="lastesttweet" template="magentothem/lastesttweet/lastesttweet.phtml" /> -->
+        </reference>
+    </default>
+</layout> 

@@ -1,0 +1,362 @@
+ 
+
+
+/* Browser Resets */
+.ma-banner7-container .flex-container a:active,
+.ma-banner7-container .flexslider a:active,
+.ma-banner7-container .flex-container a:focus,
+.ma-banner7-container .flexslider a:focus  {outline: none;}
+.ma-banner7-container .slides,
+.ma-banner7-container .flex-control-nav,
+.ma-banner7-container .flex-direction-nav {margin: 0; padding: 0; list-style: none;} 
+
+/* FlexSlider Necessary Styles
+*********************************/ 
+.ma-banner7-container .flexslider {margin: 0; padding: 0;}
+.ma-banner7-container .flexslider .slides > li {display: none; -webkit-backface-visibility: hidden; position: relative; } /* Hide the slides before the JS is loaded. Avoids image jumping */
+.ma-banner7-container .flexslider .slides img { display: block;  }
+.ma-banner7-container .flex-pauseplay span {text-transform: capitalize;}
+
+/* Clearfix for the .slides element */
+.ma-banner7-container .slides:after {content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;} 
+html[xmlns] .ma-banner7-container .slides {display: block;} 
+* html .ma-banner7-container .slides {height: 1%;}
+
+/* No JavaScript Fallback */
+/* If you are not using another script, such as Modernizr, make sure you
+ * include js that eliminates this class on page load */
+.no-js .ma-banner7-container .slides > li:first-child {display: block;}
+
+
+/* FlexSlider Default Theme
+*********************************/
+.ma-banner7-container .flexslider {padding: 0; position: relative; zoom: 1;}
+.ma-banner7-container .flex-viewport {max-height: 2000px; -webkit-transition: all 1s ease; -moz-transition: all 1s ease; transition: all 1s ease;}
+.ma-banner7-container .loading .flex-viewport {max-height: 300px;}
+.ma-banner7-container .flexslider .slides {zoom: 1;}
+
+.ma-banner7-container .carousel li {margin-right: 5px}
+
+
+/* Direction Nav */
+.ma-banner7-container .flex-direction-nav {*height: 0;}
+
+/* Control Nav */
+
+.ma-banner7-container .flex-control-nav li { margin: 0 6px; display: inline-block; zoom: 1; *display: inline; }
+
+.ma-banner7-container .flex-control-thumbs {margin: 5px 0 0; position: static; overflow: hidden;}
+.ma-banner7-container .flex-control-thumbs li {width: 25%; float: left; margin: 0;}
+.ma-banner7-container .flex-control-thumbs img {width: 100%; display: block; opacity: .7; cursor: pointer;}
+.ma-banner7-container .flex-control-thumbs img:hover {opacity: 1;}
+.ma-banner7-container .flex-control-thumbs .flex-active {opacity: 1; cursor: default;}
+.ma-nivoslider {
+    overflow: hidden;
+}
+.nivoslider {
+position: relative;
+overflow: hidden;
+height: auto;
+width: 100%; 
+}
+.nivoslider img {
+position: absolute;
+top: 0;
+left: 0;
+display: none;
+}
+.nivo-controlNav {
+    text-align: left;
+	position: absolute;
+	width: 100%;
+	bottom: 30px;
+	padding-left: 20px;
+}
+
+.banner7-caption {
+position: absolute;
+left:0; 
+top:0;  
+width: 100%;
+background: none;
+color: #fff;
+font-size: 16px;
+z-index: 999;
+}
+.ma-banner7-container .ma-loading {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    z-index: 99;
+    background: url(../images/loader.gif) no-repeat ;
+    top: 50%;
+    left: 50%;
+    margin: -8px 0 0 -8px;
+}
+/* The Nivo Slider styles */
+.nivoSlider {
+    position:relative;
+    width:100%;
+    height:auto;
+    overflow: hidden;
+}
+.nivoSlider img {
+    position:absolute; 
+    max-width: none;
+}
+.nivo-main-image {
+    display: block !important;
+    position: relative !important; 
+    width: 100% !important;
+}
+
+/* If an image is wrapped in a link */
+.nivoSlider a.nivo-imageLink {
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:100%;
+    border:0;
+    padding:0;
+    margin:0;
+    z-index:6;
+    display:none;
+    background:white; 
+    filter:alpha(opacity=0); 
+    opacity:0;
+}
+/* The slices and boxes in the Slider */
+.nivo-slice {
+    display:block;
+    position:absolute;
+    z-index:5;
+    height:100%;
+    top:0;
+}
+.nivo-box {
+    display:block;
+    position:absolute;
+    z-index:5;
+    overflow:hidden;
+}
+.nivo-box img { display:block; }
+
+.nivo-caption {
+  position:absolute;
+    left:0; 
+    top:0;  
+    color:#fff;
+    width:100%;
+    height: 100%;
+    z-index:8;
+}
+.nivo-html-caption {
+    display: none;
+}
+.nivo-main-image {
+    display: block !important;
+    position: relative !important; 
+    width: 100% !important;
+}
+
+/* If an image is wrapped in a link */
+.nivoSlider a.nivo-imageLink {
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:100%;
+    border:0;
+    padding:0;
+    margin:0;
+    z-index:6;
+    display:none;
+    background:white; 
+    filter:alpha(opacity=0); 
+    opacity:0;
+}
+/* The slices and boxes in the Slider */
+.nivo-slice {
+    display:block;
+    position:absolute;
+    z-index:5;
+    height:100%;
+    top:0;
+}
+.nivo-box {
+    display:block;
+    position:absolute;
+    z-index:5;
+    overflow:hidden;
+}
+
+
+.nivo-caption {
+  position:absolute;
+    left:0; 
+    top:0;  
+    color:#fff;
+    width:100%;
+    z-index:8;
+    height: 100%;
+}
+.nivo-html-caption {
+    display: none;
+}
+@-webkit-keyframes myfirst {
+  from {width: 0;}
+  to {width: 100%;}
+ }
+ @keyframes myfirst {
+  from {width: 0;}
+  to {width: 100%;}
+ }
+ .timethai.pos_hover{
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+  
+ }
+ .ma-banner7-container{
+    position :relative; min-height: 130px;
+	margin: 30px 0 35px;
+ }
+
+/*===================================================Content-banner7===========================================================*/
+.nivoSlider {
+	position:relative;
+	width:100%;
+	height:auto;
+	overflow: hidden;
+}
+ 
+.banner7-content .text-content {  position: absolute; top: 65px; left: 45px; } 
+.banner7-content img { top: 0; position: absolute;  height: 100%;  } 
+.banner7-content h1 { font-size: 72px; text-transform: uppercase; font-weight: 800; font-family: Poppins; }
+.banner7-content h2 { font-size: 40px; text-transform: capitalize; font-weight: 800; font-family: Poppins; }
+.banner7-content h3 { font-size: 20px; text-transform: capitalize; font-weight: 800; font-family: Poppins; }
+.banner7-readmore { margin-top: 100px;  }
+.banner7-readmore a {    font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  border: 2px solid #fff;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 30px;
+  line-height: 42px;
+  padding: 0 25px;
+  letter-spacing: 2px;
+	animation: slideInUp 0.5s linear alternate; 
+	-webkit-animation: slideInUp 0.5s linear alternate;
+	-moz-animation: slideInUp 0.5s linear alternate;
+}
+.banner7-readmore a:hover { color: #f45c5d; border-color: #f45c5d; }
+.banner7-content .banner7-des {
+	font-size: 24px; 
+	font-weight: 300;
+	animation: slideInDown 1s linear alternate; 
+	-webkit-animation: slideInDown 1s linear alternate;
+	-moz-animation: slideInDown 1s linear alternate
+}
+.title1 { 
+	animation: slideInRight 0.5s linear alternate; 
+	-webkit-animation: slideInRight 0.5s linear alternate;
+	-moz-animation: slideInRight 0.5s linear alternate;
+}
+
+.title2 { 
+	animation: slideInDown 0.5s linear alternate; 
+	-webkit-animation: slideInDown 0.5s linear alternate;
+	-moz-animation: slideInDown 0.5s linear alternate;
+}
+.title3 { 
+	animation: slideInUp 0.5s linear alternate; 
+	-webkit-animation: slideInUp 0.5s linear alternate;
+	-moz-animation: slideInUp 0.5s linear alternate;
+}
+
+.slider-1 .img1 {
+	animation: slideInUp 0.5s linear alternate; 
+	-webkit-animation: slideInUp 0.5s linear alternate;
+	-moz-animation: slideInUp 0.5s linear alternate;
+}
+ 
+.slider-1 .text-content{ text-align: left;  }
+.slider-1 .banner7-des { margin: 20px 0; }
+.slider-1 .title1 { color: #f45c5d; font-size: 24px; line-height: 24px; } 
+.slider-1 .title2  { color: #fff; font-size: 70px; line-height: 70px; text-transform: uppercase; }
+.slider-1 .title2  .word2 { color: #f45c5d; }
+.slider-1 .title3 { font-size: 36px; color: #fff; }
+.slider-1 .img1 { margin-right: -740px; right: 50%; } 
+
+.slider-2 {  }
+.slider-2 .text-content { top: 100px;  }
+ 
+.slider-2 .title-container  {  }
+.slider-2 .title1 { color: #fff; font-size: 48px; line-height: 48px; } 
+.slider-2 .title2 { color: #fff; font-size: 24px; line-height: 24px; font-weight: 300; } 
+.slider-2  .img1 { right: 50%; margin-right: -735px; animation: slideInDown 0.5s linear alternate; 
+	-webkit-animation: slideInDown 0.5s linear alternate;
+	-moz-animation: slideInDown 0.5s linear alternate; } 
+  
+
+
+
+ 
+
+ 
+@media ( max-width: 1199px) { 
+	.slider-1 .title1 { font-size: 20px; line-height: 20px; } 
+.slider-1 .title2 { 
+    font-size: 43px;
+    line-height: 45px; 
+}
+.slider-1 .title3 {
+    font-size: 25px; 
+}
+.slider-2 .title1 { 
+    font-size: 40px;
+    line-height: 40px;
+}
+.slider-2 .title2 { 
+    font-size: 16px;
+    line-height: 16px; 
+}
+}
+ 
+@media ( max-width: 991px) {  
+.banner7-content .text-content { top: 43px;} 
+.slider-2 .text-content {
+    top: 60px;
+}
+}
+@media ( max-width: 767px) {   
+	 
+}
+@media ( max-width: 480px) {  
+.slider-1 .title1 { font-size: 16px; line-height: 16px; } 
+.slider-1 .title2 { 
+    font-size: 35px;
+    line-height: 35px; 
+}
+.slider-1 .title3 {
+    font-size: 20px; 
+}
+.banner7-readmore {
+    margin-top: 50px;
+}
+.slider-2 .title1 { 
+    font-size: 30px;
+    line-height: 30px;
+}
+.slider-2 .title2 { 
+    font-size: 14px;
+    line-height: 14px; 
+} 
+}
+
+ 
+@media ( max-width: 320px) { 
+	
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<layout>
+    <adminhtml_seoredirects_manage_index>
+        <reference name="content">
+            <!-- 
+            <block type="adminhtml/store_switcher" name="store_switcher" as="store_switcher">
+                <action method="setUseConfirm"><params>0</params></action>
+            </block>
+            -->
+            <block type="seoredirects/manage" name="seoredirects_manage"></block>
+        </reference>
+    </adminhtml_seoredirects_manage_index>
+</layout>

@@ -1,0 +1,162 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Notive_Ewarehousing>
+            <version>2.2.5</version>
+        </Notive_Ewarehousing>
+    </modules>
+    <global>
+        <helpers>
+            <ewarehousing>
+                <class>Notive_Ewarehousing_Helper</class>
+            </ewarehousing>
+        </helpers>
+        <models>
+            <notive_ewarehousing>
+                <class>Notive_Ewarehousing_Model</class>
+            </notive_ewarehousing>
+        </models>
+        <blocks>
+            <adminhtml>
+                <rewrite>
+                    <sales_order_view>Notive_Ewarehousing_Block_Adminhtml_Sales_Order_View</sales_order_view>
+                </rewrite>
+            </adminhtml>
+            <ewarehousing>
+                <class>Notive_Ewarehousing_Block</class>
+            </ewarehousing>
+        </blocks>
+        <events>
+            <sales_order_save_after>
+                <observers>
+                    <Notive_Ewarehousing>
+                        <type>singleton</type>
+                        <class>Notive_Ewarehousing_Model_Observers_Order</class>
+                        <method>sales_order_save_after</method>
+                    </Notive_Ewarehousing>
+                </observers>
+            </sales_order_save_after>
+        </events>
+        <resources>
+            <notive_ewarehousing_setup>
+                <setup>
+                    <module>Notive_Ewarehousing</module>
+                    <class>Notive_Ewarehousing_Model_Resource_Setup</class>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </notive_ewarehousing_setup>
+        </resources>
+        <sales>
+            <order>
+                <statuses>
+                    <notive_ewarehousing_sent translate="label">
+                        <label>Sent To eWarehousing</label>
+                    </notive_ewarehousing_sent>
+                    <notive_ewarehousing_error translate="label">
+                        <label>Not Sent To eWarehousing</label>
+                    </notive_ewarehousing_error>
+                </statuses>
+                <states>
+                    <holded translate="label">
+                        <statuses>
+                            <notive_ewarehousing_error />
+                        </statuses>
+                    </holded>
+                    <processing translate="label">
+                        <statuses>
+                            <notive_ewarehousing_sent />
+                        </statuses>
+                    </processing>
+                </states>
+            </order>
+        </sales>
+    </global>
+
+    <default>
+        <Notive_Ewarehousing>
+            <order>
+                <status_send>processing</status_send>
+            </order>
+        </Notive_Ewarehousing>
+    </default>
+
+    <admin>
+        <routers>
+            <ewarehousing>
+                <use>admin</use>
+                <args>
+                    <module>Notive_Ewarehousing</module>
+                    <frontName>ewarehousing</frontName>
+                </args>
+            </ewarehousing>
+            <!-- https://magento.com/security/patches/supee-6788-technical-details does not work as expected -->
+            <!--<adminhtml>-->
+            <!--<args>-->
+            <!--<modules>-->
+            <!--<ewarehousing after="Mage_Adminhtml">Notive_Ewarehousing</ewarehousing>-->
+            <!--</modules>-->
+            <!--</args>-->
+            <!--</adminhtml>-->
+        </routers>
+    </admin>
+    <adminhtml>
+        <!--
+        Used for testing:
+        <menu>
+            <system>
+                <children>
+                    <ewarehousing_test translate="title" module="ewarehousing">
+                        <title>eWarehousing Test</title>
+                        <action>ewarehousing/adminhtml_ewarehousingbackend</action>
+                    </ewarehousing_test>
+                </children>
+            </system>
+        </menu>-->
+
+        <acl>
+            <resources>
+                <all>
+                    <title>Allow Everything</title>
+                </all>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <Notive_Ewarehousing translate="title">
+                                            <title>Ewarehousing Settings</title>
+                                        </Notive_Ewarehousing>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
+
+    <crontab>
+        <jobs>
+            <notive_order_cron>
+                <schedule>
+                    <cron_expr>*/15 * * * *</cron_expr>
+                </schedule>
+                <run>
+                    <model>notive_ewarehousing/cron::runOrders</model>
+                </run>
+            </notive_order_cron>
+            <notive_stock_cron>
+                <schedule>
+                    <cron_expr>0 * * * *</cron_expr>
+                </schedule>
+                <run>
+                    <model>notive_ewarehousing/cron::runStock</model>
+                </run>
+            </notive_stock_cron>
+        </jobs>
+    </crontab>
+</config>

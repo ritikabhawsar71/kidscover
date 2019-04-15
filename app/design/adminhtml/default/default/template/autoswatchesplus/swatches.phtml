@@ -1,0 +1,94 @@
+<?php $ini_setting = ini_get('max_file_uploads'); ?>
+<?php if($ini_setting == '' || $ini_setting == null) { $ini_setting = 20; } ?>
+<script type="text/javascript">
+	document.maximumUploads = <?php echo($ini_setting); ?>;
+	document.potentialUploads = 0;
+	function addUpload(ID) {
+		++document.potentialUploads;
+		if (document.potentialUploads > document.maximumUploads) {
+			alert("<?php echo Mage::helper('autoswatchesplus')->__('Sorry, this server allows a maximum of %s uploads at a time. Please upload the current swatches to upload more.', $ini_setting); ?>");
+		} else {
+			var newField = "<input type=\"file\" name=\"autoswatchesplus_swatch["+ID+"]\">";
+			document.getElementById("autoswatchesplus_upload_swatch_area_"+ID).innerHTML = newField;
+		}
+	}
+</script>
+<?php $swatchsize = Mage::helper('autoswatchesplus/data')->getSwatchSize('null'); ?>
+<div>
+	<ul class="messages">
+    	<li class="notice-msg">
+        	<ul>
+            	<li>
+					<?php echo Mage::helper('autoswatchesplus')->__('For best results, please upload square images.<br>To use auto swatches, please go to Manage Label / Options and enter the HEX code of your color in the Admin value field. Example: Green #83F52C<br>The preview image below is exactly how your swatch will look based on your default swatch size setting in the configuration.') ?>
+            	</li>
+        	</ul>
+    	</li>
+	</ul>
+</div>
+
+<div class="entity-edit">
+	<div class="entry-edit-head">
+		<h4 class="icon-head head-edit-form fieldset-legend"><?php echo Mage::helper('autoswatchesplus')->__('Manage Swatches') ?></h4>
+   	</div>
+    <div class="box">
+    	<div class="hor-scroll">
+        	<table cellspacing="10">
+            	<tr>
+                 	<th width="150"><?php echo Mage::helper('autoswatchesplus')->__('Swatch Label') ?></th>
+                    <th width="15"></th>
+                    <th width="250"><?php echo Mage::helper('autoswatchesplus')->__('Upload Swatch Image') ?></th>
+                    <th width="15"></th>
+                    <th><?php echo Mage::helper('autoswatchesplus')->__('Preview') ?></th>
+                    <th width="15"></th>
+                    <th><?php echo Mage::helper('autoswatchesplus')->__('Swatch Type') ?></th>
+                    <th width="15"></th>
+                    <th><?php echo Mage::helper('autoswatchesplus')->__('HEX Code') ?></th>
+                    <th width="15"></th>
+                    <th><?php echo Mage::helper('autoswatchesplus')->__('Delete') ?></th>
+                </tr>
+                <?php foreach (Mage::helper('autoswatchesplus')->getAttribOptions() as $option): ?>
+                	<?php $theName = explode('#', $option->getData('value')); ?>
+               		<?php $color_value = isset($theName[1]) ? '#'.$theName[1] : ''; ?>
+					<?php $color_name = $theName[0]; ?>
+                	<tr>
+                    	<td><?php echo $color_name; ?></td>
+                    	<td></td>
+                    	<td>
+                    		<div id="autoswatchesplus_upload_swatch_area_<?php echo $option->getData('option_id'); ?>">
+								<?php $ae = Mage::helper('autoswatchesplus')->getSwatchImg($option) || isset($theName[1]) ? Mage::helper('autoswatchesplus')->__('Edit ') : Mage::helper('autoswatchesplus')->__('Add '); ?>
+                        		<a href="#" onclick="addUpload(<?php echo $option->getData('option_id'); ?>); return false;">
+									<?php echo $ae . Mage::helper('autoswatchesplus')->__('Swatch Image'); ?>
+								</a>
+							</div>
+                    	</td>
+                    	<td></td>
+                    	<td align="center">
+                        	<?php $swatch = Mage::helper('autoswatchesplus')->getSwatchImg($option); ?>
+                        	<?php if ($swatch): ?>
+                            	<img src="<?php echo $swatch; ?>" alt="<?php echo $color_name; ?>" width="<?php echo $swatchsize ?>px" height="<?php echo $swatchsize ?>px">
+                            	<?php $auto = Mage::helper('autoswatchesplus')->__('Image'); ?>
+                        	<?php elseif(isset($theName[1])): ?>
+								<?php echo '<div style="height:'.$swatchsize.'px; width:'.$swatchsize.'px; background-color:'.$color_value.';"></div>'; ?>
+								<?php $auto = Mage::helper('autoswatchesplus')->__('Auto'); ?>
+							<?php else: ?>
+								<?php $swatchimage = Mage::helper('autoswatchesplus')->getSwatchUrl('empty'); ?>
+								<img src="<?php echo $swatchimage; ?>" alt="Please Upload Swatch!" width="<?php echo $swatchsize ?>px" height="<?php echo $swatchsize ?>px">
+								<?php $auto = Mage::helper('autoswatchesplus')->__('None'); ?>
+							<?php endif; ?>
+                    	</td>
+                    	<td></td>
+                    	<td align="center"><?php echo $auto; ?></td>
+                    	<td></td>
+                    	<td align="center">
+							<?php echo isset($theName[1]) ? strtoupper($color_value) : '-'; ?>
+                   		</td>
+                    	<td></td>
+                    	<td align="center">
+                    		<input <?php if($auto !== 'Image') echo 'disabled="disabled"'; ?> type="checkbox" value="1" name="autoswatchesplus_swatch_delete[<?php echo $option->getData('option_id'); ?>]">
+                    	</td>
+                	</tr>
+                <?php endforeach; ?>
+            </table>
+     	</div>
+   	</div>
+</div>

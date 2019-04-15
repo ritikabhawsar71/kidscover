@@ -1,0 +1,23 @@
+.ma-banner7-container, .catalog-category-view  .category-image img, .map-contacts img {
+	border: 1px solid grey;
+}
+.title_subscribe li {
+	font-size: 16px;
+}
+#newsletter_pop_up {
+	top: 30% !important;
+}
+.nivo-directionNav a {
+	background-color: #0096e2;
+	border: 0;
+}
+.nivo-directionNav a:hover {
+	background-color: blue;
+	border: 0;
+}
+.banner7-readmore a:hover {
+	color: yellow;
+}
+.banner7-readmore a {
+	color: red;
+}

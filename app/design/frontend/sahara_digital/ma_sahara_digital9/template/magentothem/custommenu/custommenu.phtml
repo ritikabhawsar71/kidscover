@@ -1,0 +1,139 @@
+<?php
+$className = Mage::getConfig()->getBlockClassName('custommenu/custommenu');
+            $block = new $className();  
+ $_menu = $block->renderCategoriesMenuHtml(0,'level-top') ?>
+<?php if($_menu): ?>
+<div class="ma-nav-mobile-container visible-xs">  
+		<div class="navbar">
+			<div id="navbar-inner" class="navbar-inner navbar-inactive">
+								<div class="menu-mobile">
+									<a class="btn btn-navbar navbar-toggle">
+											<span class="icon-bar">icon1</span>
+											<span class="icon-bar">icon2</span>
+											<span class="icon-bar">icon3</span>
+									</a>
+									<span class="brand navbar-brand"><?php echo $this->__('Categories') ?></span>
+								</div>
+				<ul id="ma-mobilemenu" class="mobilemenu nav-collapse collapse">
+					<?php echo $_menu ?>
+				</ul>
+			</div>
+		</div> 
+</div>
+<?php endif ?>
+
+<?php $_categories = Mage::helper('catalog/category')->getStoreCategories() ?>
+<?php if(count($_categories)): 
+    ?>
+<div class="nav-container visible-lg visible-md">  
+	<div class="container">  
+		<div id="pt_custommenu" class="pt_custommenu">
+		
+			
+				<?php
+				$showhome = Mage::getStoreConfig('custommenu/general/showhome');
+				$active = '';
+				if(Mage::getSingleton('cms/page')->getIdentifier() == 'assyrian_home'  && Mage::app()->getFrontController()->getRequest()->getRouteName() == 'cms') :
+				    $active = ' act';
+				endif; 
+				if($showhome){
+				    $id     = "_home";
+				    $html[] = '<div id="pt_menu' . $id . '" class="pt_menu' . $active . '">';
+				    $html[] = '<div class="parentMenu">';
+				    $html[] = '<a href="'.Mage::helper('core/url')->getHomeUrl().'">';
+				    $html[] = '<span>Home</span>';
+				    $html[] = '</a>';
+				    $html[] = '</div>';
+			//            $html[] = '<div id="popup' . $id . '" class="popup" style="display: none; width: 1228px;">';
+			//            $html[] = '</div>';
+				    $html[] = '</div>';
+				    $html = implode("\n", $html);
+				    echo $html;
+				}
+				$className = Mage::getConfig()->getBlockClassName('custommenu/custommenu');
+				$block = new $className();               
+				//$block->_prepareData();
+				$item = 0;
+				 foreach ($_categories as $_category): $item++;?>
+				     <?php echo $block->drawCustomMenuItem($_category,0,false,$item) ?>
+				<?php endforeach ?>
+				 
+				<?php
+			       
+				
+				/*menu links*/
+				$blockLinkId = 'pt_menu_links';
+				$blockLinkHtml = $this->getLayout()->createBlock('cms/block')->setBlockId($blockLinkId)->toHtml();
+				if ($blockLinkHtml){
+				    $id     = "_link";
+				    $htmlLink[] = '<div id="pt_menu' . $id . '" class="pt_menu">';
+				    $htmlLink[] = '<div class="parentMenu">';
+				    $htmlLink[] = $blockLinkHtml;
+				    $htmlLink[] = '</div>';
+				    $htmlLink[] = '</div>';
+				    $htmlLink = implode("\n", $htmlLink);
+				    echo $htmlLink;
+				}
+				?>
+				<?php
+				$collection = Mage::getModel('cms/block')->getCollection()
+					    ->addFieldToFilter('identifier', array('like'=>'pt_item_menu'.'%'))
+					    ->addFieldToFilter('is_active', 1);
+				foreach($collection as $key => $value){
+				    $blockId = $value->getIdentifier();
+				    $blockHtml = $this->getLayout()->createBlock('cms/block')->setBlockId($blockId)->toHtml();
+				    if ($blockHtml) echo $block->drawCustomMenuBlock($blockId);
+				}
+				
+			       
+				?>
+				<div id="pt_menu5" class="pt_menu nav-5">
+					<div class="parentMenu">
+						<a href="<?php echo Mage::helper('core/url')->getHomeUrl() . 'support-video'; ?>">
+							<span>Support</span>
+						</a>
+					</div>
+					<div id="popup74" class="popup" style="width: 282px; top: 63px; left: 349.141px; overflow: hidden; display: none;">
+						<div class="block1" id="block174" style="width: 200px;">
+							<div class="column last col1"><div class="itemMenu level1">
+								<a class="itemMenuName level1 nochild" href="<?php echo Mage::helper('core/url')->getHomeUrl() . 'support-video'; ?>">
+									<span>Video&nbsp;</span>
+								</a>
+								<a class="itemMenuName level1 nochild" href="<?php echo Mage::helper('core/url')->getHomeUrl() . 'gegarandeerde'; ?>">
+									<span>Garantie&nbsp;</span>
+								</a>
+								<a class="itemMenuName level1 nochild" href="<?php echo Mage::helper('core/url')->getHomeUrl() . 'veelgestelde'; ?>">
+									<span>Veel&nbsp;Gestelde&nbsp;vragen&nbsp;</span>
+								</a>
+							</div>
+						</div>
+						<div class="clearBoth"></div>
+					</div>
+				</div>
+				</div>
+				<div id="pt_menu6" class="pt_menu nav-6 pt_menu_no_child">
+					<div class="parentMenu">
+						<a href="<?php echo Mage::helper('core/url')->getHomeUrl() . 'apps'; ?>">
+							<span>Apps</span>
+						</a>
+					</div>
+				</div>
+				<div id="pt_menu7" class="pt_menu nav-7 pt_menu_no_child">
+					<div class="parentMenu">
+						<a href="<?php echo Mage::helper('core/url')->getHomeUrl() . 'scholen'; ?>">
+							<span>Scholen</span>
+						</a>
+					</div>
+				</div>
+				<div class="clearBoth"></div>
+		</div>  
+	</div>  
+</div>
+<script type="text/javascript">
+//<![CDATA[
+var CUSTOMMENU_POPUP_EFFECT = <?php echo (int)Mage::getStoreConfig('custommenu/popup/effect')?>;
+var CUSTOMMENU_POPUP_TOP_OFFSET = <?php echo (int)Mage::getStoreConfig('custommenu/popup/top_offset')?>;
+//]]>
+</script>
+
+<?php endif ?>

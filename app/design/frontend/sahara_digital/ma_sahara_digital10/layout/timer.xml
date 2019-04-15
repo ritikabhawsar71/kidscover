@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+         <reference name="head">
+             <action method="addJs"><script>magentothem/timer.js</script></action>
+             <action method="addCss"><stylesheet>magentothem/css/timer.css</stylesheet></action>
+        </reference>
+    </default>
+    
+    <catalog_product_view>
+        <update handle="content"/>
+	<reference name="product.info.addtocart">
+            <block type="timer/view" name="view" as="view" />
+	</reference>
+    </catalog_product_view>
+
+    
+
+	<cms_index_index>
+        <reference name="head"> 
+		
+		</reference>
+        <reference name="left">
+			<block type="timer/timer" name="ma.timer" template="magentothem/timer/timer.phtml" before="-" />
+        </reference>
+    </cms_index_index>
+</layout>

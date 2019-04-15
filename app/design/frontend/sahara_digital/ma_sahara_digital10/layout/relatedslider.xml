@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+        <reference name="root">
+            <block type="relatedslider/page_html_head" name="magentothem_relatedslider_head" as="magentothem_relatedslider_head"/>
+        </reference> 
+    </default>
+    <catalog_product_view translate="label">		
+		<!-- <reference name="content">
+			 <block type="catalog/product_list_related" name="magentothem.relatedslider" as="related_slider" template="magentothem/relatedslider/relatedslider.phtml" />  
+        </reference>  -->
+    </catalog_product_view>
+</layout> 

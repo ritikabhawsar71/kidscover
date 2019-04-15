@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+    </default>
+    <cms_index_index> 
+        <reference name="featured_categories">
+            <block type="onsaleslider/onsaleslider" name="ma.onsaleslider" before="-" template="magentothem/onsaleslider/onsaleslider.phtml" />
+        </reference>
+    </cms_index_index>
+</layout> 

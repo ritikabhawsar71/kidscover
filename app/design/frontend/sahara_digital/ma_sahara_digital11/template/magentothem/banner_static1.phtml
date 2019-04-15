@@ -1,0 +1,8 @@
+
+<div class="banner-static1">
+	<div class="container">
+		<?php $block = Mage::getModel('cms/block')->setStoreId(Mage::app()->getStore()->getId())->load('banner_static1');
+		echo Mage::getSingleton('widget/template_filter')->filter($block->getContent());?>
+	</div>
+</div>
+ 

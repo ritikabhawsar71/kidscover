@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<flaton>
+    <resources>
+        <resource>
+            <title>Flaton4 Home page</title>
+            <identifier>flaton_home</identifier>
+            <root_template>two_columns_right</root_template>
+            <content><![CDATA[<div class="home-content">
+<div class="block-timer">{{block type="timer/timer" name="ma.timer" template="magentothem/timer/timer.phtml"}}</div>
+{{block type="producttabs/producttabs" name="producttabs" as="producttabs" template="magentothem/producttabs/producttabs.phtml"}}
+<div class="most-viewed">{{block type="mostviewedproductslider/mostviewedproductslider" name="mostviewedproductslider" template="magentothem/mostviewedproductslider/mostviewedproductslider.phtml"}}</div>
+</div>]]></content>
+            <sort_order>1</sort_order>
+            <is_active>1</is_active>
+        </resource>
+    </resources>
+	<resources>
+        <resource>
+            <title>404 Not Found</title>
+            <identifier>no-route1</identifier>
+            <root_template>one_column</root_template>
+				<content><![CDATA[
+					<div class="page-not-found"><img alt="" src="{{media url="wysiwyg/img404.jpg"}}" />
+<div class="page-title">
+<h1>The page you requeted cannot be found.</h1>
+</div>
+<div class="page-content">
+<div class="des-container">
+<h1 class="back-home"><a href="{{store url="#"}}">back to home</a></h1>
+</div>
+</div>
+</div>
+				]]></content>
+				<sort_order>1</sort_order>
+            <is_active>1</is_active>
+        </resource>
+    </resources>
+</flaton>

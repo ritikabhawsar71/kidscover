@@ -1,0 +1,39 @@
+<?xml version="1.0"?> 
+<config>
+	<acl>
+		<resources>
+			<admin>
+				<children>
+					<system>
+						<children>
+							<config>
+								<children>
+									<onsaleslider>
+										<title>OnSale Products Slider</title>
+									</onsaleslider>
+								</children>
+							</config>
+						</children>
+					</system>	
+					<magentothem translate="title" module="onsaleslider">
+						<title>Magentothem</title>
+						<sort_order>71</sort_order>               
+						<children>
+							<onsaleslider translate="title" module="onsaleslider">
+								<title>On Sale Slider</title>
+								<sort_order>15</sort_order>
+								<children>
+									<configuration>
+										<title>Configuration</title>
+										<sort_order>1</sort_order>
+										<action>adminhtml/system_config/edit/section/onsaleslider</action>
+									</configuration>
+								</children>
+							</onsaleslider>
+						</children>
+					</magentothem>					
+				</children>
+			</admin>
+        </resources>
+	</acl>
+</config>

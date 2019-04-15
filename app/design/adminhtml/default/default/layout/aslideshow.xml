@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     default_default
+ * @copyright   Copyright (c) 2011 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+-->
+
+<layout>
+    <aslideshow_adminhtml_slideshow_edit>
+        <reference name="head">
+            <action method="removeItem"><type>js</type><name>mage/adminhtml/product.js</name></action>
+            <action method="addJs"><script>aht_aslideshow/adminhtml/product.js</script></action>
+        </reference>
+        <reference name="content">
+            <block type="core/template" name="script.aslideshow" template="aht_aslideshow/script.phtml"/>
+            <block type="core/template" name="script.transition.aslideshow" template="aht_aslideshow/script-transition.phtml"/>
+        </reference>
+    </aslideshow_adminhtml_slideshow_edit>
+    <aslideshow_adminhtml_slideshow_add>
+        <reference name="head">
+            <action method="removeItem"><type>js</type><name>mage/adminhtml/product.js</name></action>
+            <action method="addJs"><script>aht_aslideshow/adminhtml/product.js</script></action>
+        </reference>
+        <reference name="content">
+            <block type="core/template" name="script.aslideshow" template="aht_aslideshow/script.phtml"/>
+            <block type="core/template" name="script.transition.aslideshow" template="aht_aslideshow/script-transition.phtml"/>
+        </reference>
+    </aslideshow_adminhtml_slideshow_add>
+    <aslideshow_adminhtml_slideshow_product>
+        <block type="core/text_list" name="root" output="toHtml">
+            <block type="aslideshow/adminhtml_slideshow_edit_tab_products" name="aslideshow.slideshow.edit.tab.products"/>
+            <block type="adminhtml/widget_grid_serializer" name="products_grid_serializer">
+                <reference name="products_grid_serializer">
+                    <action method="initSerializerBlock">
+                        <grid_block_name>aslideshow.slideshow.edit.tab.products</grid_block_name>
+                        <data_callback>getSelectedSlideshowProducts</data_callback>
+                        <hidden_input_name>products[slideshow]</hidden_input_name>
+                        <reload_param_name>products_slideshow</reload_param_name>
+                    </action>
+                    <action method="addColumnInputName">
+                        <input_name>position</input_name>
+                    </action>
+                </reference>
+            </block>
+        </block>
+    </aslideshow_adminhtml_slideshow_product>
+
+    <aslideshow_adminhtml_slideshow_productgrid>
+        <!--<reference name="head">
+            <action method="removeItem"><type>js</type><name>mage/adminhtml/product.js</name></action>
+        </reference>-->
+        <block type="core/text_list" name="root" output="toHtml">
+            <block type="aslideshow/adminhtml_slideshow_edit_tab_products" name="aslideshow.slideshow.edit.tab.products"/>
+        </block>
+    </aslideshow_adminhtml_slideshow_productgrid>
+
+    <aslideshow_adminhtml_slideshow_staticblock>
+        <block type="core/text_list" name="root" output="toHtml">
+            <block type="aslideshow/adminhtml_slideshow_edit_tab_staticblocks" name="aslideshow.slideshow.edit.tab.staticblocks"/>
+            <block type="adminhtml/widget_grid_serializer" name="staticblocks_grid_serializer">
+                <reference name="staticblocks_grid_serializer">
+                    <action method="initSerializerBlock">
+                        <grid_block_name>aslideshow.slideshow.edit.tab.staticblocks</grid_block_name>
+                        <data_callback>getSelectedSlideshowStaticblocks</data_callback>
+                        <hidden_input_name>staticblocks[slideshow]</hidden_input_name>
+                        <reload_param_name>staticblocks_slideshow</reload_param_name>
+                    </action>
+                    <action method="addColumnInputName">
+                        <input_name>position</input_name>
+                    </action>
+                </reference>
+            </block>
+        </block>
+    </aslideshow_adminhtml_slideshow_staticblock>
+
+    <aslideshow_adminhtml_slideshow_staticblockgrid>
+        <!--<reference name="head">
+            <action method="removeItem"><type>js</type><name>mage/adminhtml/product.js</name></action>
+        </reference>-->
+        <block type="core/text_list" name="root" output="toHtml">
+            <block type="aslideshow/adminhtml_slideshow_edit_tab_staticblocks" name="aslideshow.slideshow.edit.tab.staticblocks"/>
+        </block>
+    </aslideshow_adminhtml_slideshow_staticblockgrid>
+</layout>

@@ -1,0 +1,120 @@
+<?php
+/**
+ * Call actions after configuration is saved
+ */
+class Magentothem_Themeoptions_Model_Observer
+{
+	private $dirPath;
+    private $filePath;
+    private $dir_store;
+	
+	private function getConfig($cf,$store_cf){
+		if(Mage::getStoreConfig('themeoptions/themeoptions_config/'.$cf,$store_cf))
+			return Mage::getStoreConfig('themeoptions/themeoptions_config/'.$cf,$store_cf);
+	}
+	
+	private function setLocation($store_cf) {
+		if(Mage::getStoreConfig('design/package/name',$store_cf))
+			$this->dir_store = Mage::getStoreConfig('design/package/name',$store_cf).'/';
+		else
+			$this->dir_store = Mage::getStoreConfig('design/package/name').'/';
+		if(Mage::getStoreConfig('design/theme/default',$store_cf))
+			$this->dir_store .= Mage::getStoreConfig('design/theme/default',$store_cf);
+		else
+			$this->dir_store .= 'default';
+			
+        $this->dirPath = Mage::getBaseDir('skin') . '/frontend/'.$this->dir_store.'/css/';
+        $this->filePath = $this->dirPath . 'skin.css';
+    }
+	
+	/**
+     * After any system config is saved
+     */
+	public function cssgenerate()
+	{
+		$section = Mage::app()->getRequest()->getParam('section');
+		if ($section == 'themeoptions')
+		{
+			$store_ids = array();
+			if(Mage::app()->getRequest()->getParam('store') && Mage::app()->getRequest()->getParam('website'))
+			{
+				$store_ids[] = Mage::getModel( "core/store" )->load(Mage::app()->getRequest()->getParam('store'))->getStore_id();
+			}
+			elseif(Mage::app()->getRequest()->getParam('website'))
+			{
+				$store_ids = Mage::getModel('core/website')->load(Mage::app()->getRequest()->getParam('website'))->getstoreIds();
+			}else{
+				foreach (Mage::app()->getWebsites() as $website){
+					foreach ($website->getGroups() as $group){
+						$stores = $group->getStores();
+						foreach ($stores as $store) {
+							$store_ids[] = $store->getId();
+						}
+					}
+				}
+			}
+			
+			foreach($store_ids as $store_id)
+			{
+				$this->setLocation($store_id);
+				
+				if(!$this->getConfig('reset_css',$store_id))
+				{ 
+					if($this->getConfig('font_main',$store_id))
+						$css .= '.top-cart-title,.pt_custommenu div.pt_menu .parentMenu a,.pt_custommenu div.pt_menu .parentMenu span.block-title,.ratings .amount a,.item-options dt,.item-options dd,.block-best h2,.block-featured h2{font-family:'.str_replace("+"," ",$this->getConfig('font',$store_id)).';font-weight:'.$this->getConfig('font_weight',$store_id).'}';
+					
+					if($this->getConfig('font_content_main',$store_id))
+					$css .= 'body,.breadcrumbs li,.footer-static-2{font-family:'.str_replace("+"," ",$this->getConfig('font_content',$store_id)).';
+						font-weight:'.$this->getConfig('font_contentweight',$store_id).'}';
+
+					if($this->getConfig('font_price_main',$store_id))
+					$css .= ' .new-icon,.sale-icon,.block-layered-nav h2,.price-box .price,.footer-static .footer-title h2,.banner-static .banner-box .box-hover a,.banner-left .banner-content h1,.title-vmega-menu h2{font-family:'.str_replace("+"," ",$this->getConfig('font_price',$store_id)).';
+						font-weight:'.$this->getConfig('font_priceweight',$store_id).'}';
+						
+					// background_color	
+					$css .= '.new-icon,.sorter .view-mode strong.grid:before,.sorter .view-mode a.grid:hover:before,.sorter .view-mode strong.list:before,.sorter .view-mode a.list:hover:before,.header-bottom .form-search button.button span span,.form-search .bootstrap-select.btn-group,.top-cart-content .actions button.button span span,.block .block-title strong span:before,.block-layered-nav #search_pr button.button span,.block-subscribe input.input-text,.block-subscribe .actions button.button span,.timer-grid .box-time-date,.timer-list .box-time-date,.product-tabs a:hover,.product-tabs li.active a,.product-tabs li.active a:hover,.cart .totals button.btn-checkout span span,.footer-static-2 .link-web ul li a:hover,#onepagecheckout_orderform button.btn-checkout,.item .item-inner .images-container .actions,.item .item-inner .images-container .actions .actions-inner button.btn-cart span span,#producttabs > .item:hover h3, #producttabs > .item.active h3,.title-group h2,#back-top,.box-timer .box-time-date,.timer-view .box-time-date,.categorytabslider .tab_categorys li:hover, .categorytabslider .tab_categorys li.active,.owl-theme .owl-controls.clickable .owl-buttons div:hover,.title-vmega-menu,.pt_vmegamenu .itemSubMenu:before,.qv-button-container {background-color:'.$this->getConfig('color',$store_id).'}';
+					
+					// background_color_hover
+					$css .= 'button.button:hover span span,.btn-remove2:hover,.header-bottom .form-search button.button:hover span span,.top-cart-content .actions button.button:hover span span,.pt_custommenu div.itemSubMenu:before,.menu-mobile,.mobilemenu li,.block-layered-nav #search_pr button.button:hover span,.block-tags .block-content li a:hover,.block-subscribe .actions button.button:hover span,.products-list .item .item-inner .actions .actions-inner .add-to-links li a.link-wishlist:hover,.products-list .item .item-inner .actions .actions-inner .add-to-links li a.link-compare:hover,.qty-button .qty-increase:hover,.qty-button .qty-decrease:hover,.cart .totals button.btn-checkout:hover span span,#onepagecheckout_orderform button.btn-checkout:hover,.item .item-inner .images-container .actions .actions-inner button.btn-cart:hover span span,.item .item-inner .actions .actions-inner .add-to-links li a:hover,#back-top:hover,.bx-wrapper .bx-controls-direction a:hover,#newsletter_pop_up .button_subscribe,.wrapper_box #continue_shopping:hover,.wrapper_box #shopping_cart:hover,.ma-timer-container .item-inner .actions .add-to-links li a:hover ,.qv-button-container:hover{background-color:'.$this->getConfig('color_hover',$store_id).'}'; 
+					
+					// text_color
+					$css .= '.block .block-title strong,.block-layered-nav .content-shopby ol li,.add-to-cart label,.footer-static-2 .link-web ul li a,.menu-recent .item-inner .des-container .readmore,.more-wrap .more-view:before {color:'.$this->getConfig('text_color',$store_id).'}';
+					
+					// text_color_hover
+					$css .= 'a,.top-link ul.links li a:hover,.language-currency li a:hover, .language-currency li.active a,.top-cart-contain .product-details .price,.pt_custommenu div.pt_menu.act .parentMenu a, .pt_custommenu div.pt_menu.active .parentMenu a,.pt_custommenu .itemMenu h4.level1:hover,.pt_custommenu .itemMenu a.level1:hover,.pt_custommenu .itemSubMenu a:hover,.pt_custommenu div.popup a.actParent,.pt_custommenu div.popup a.act,.mini-products-list .product-details .product-name a:hover,.block-account .block-content li.current,.block-layered-nav .content-shopby ol li:hover, .block-layered-nav .content-shopby ol li:hover a,.block-tags .actions a:hover,.products-list .product-name a:hover,.ratings .rating-links a:hover,.ratings .amount a:hover,.email-friend a:hover,.product-view .product-shop .availability span,.product-view .product-shop .availability:before,.product-view .product-shop .add-to-links li a:hover,.product-view .product-shop .box-container1 .sku,.product-view .product-shop .box-container1 .brand,.product-name a:hover,.page-sitemap .sitemap a:hover,#shopping-cart-table tbody td a:hover,#shopping-cart-table tbody td .price,.cart-table .product-name a:hover,.cart .crosssell .add-to-links li a:hover,.footer-static .footer-content ul li a:hover,.footer address a,.menu-recent .item-inner .des-container .title-blog:hover,.menu-recent .item-inner .des-container .readmore:hover,.catgrid ul li a:hover,.wrapper_box .p_name a:hover,.pt_custommenu div.pt_menu .parentMenu a:hover, .pt_custommenu div.pt_menu .parentMenu span.block-title:hover, .pt_custommenu #pt_menu_link ul li a.act, .pt_custommenu #pt_menu_link ul li a:hover, .pt_custommenu div.pt_menu.act .parentMenu a, .pt_custommenu div.pt_menu.active .parentMenu a {color:'.$this->getConfig('text_color_hover',$store_id).'}';
+					
+					// border
+					$css .= '.block .block-title,.product-tabs,#producttabs,.title-group,.categorytabslider .tab_categorys {border-color:'.$this->getConfig('border',$store_id).'}';
+					
+					// border_hover
+					$css .= '.btn-remove2:hover,.block-layered-nav .content-shopby ol li:hover a:before,.products-list .item .item-inner .actions .actions-inner .add-to-links li a.link-wishlist:hover,.products-list .item .item-inner .actions .actions-inner .add-to-links li a.link-compare:hover,.ma-timer-container .item-inner .actions .add-to-links li a:hover,.ma-banner7-container .flex-control-paging li a:hover,.ma-banner7-container .flex-control-paging li a.flex-active,.nivo-controlNav a:hover,.nivo-controlNav a.active {border-color:'.$this->getConfig('border_hover',$store_id).'}';
+					
+					$image_bg = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN).'frontend/'.$this->dir_store.'/images/pattern/'.$this->getConfig('bg_pattern',$store_id).'.png';
+					$css .= 'body{background-color:'.$this->getConfig('bg_color',$store_id);
+					
+					if($this->getConfig('bg_pattern',$store_id ))
+						$css .=';background-image:url("'.$image_bg.'")';
+						$css .='}'; 
+					
+					
+				}else{
+					$css = '';
+				}
+				
+				try{
+					$fh = new Varien_Io_File(); 
+					$fh->setAllowCreateFolders(true); 
+					$fh->open(array('path' => $this->dirPath));
+					$fh->streamOpen($this->filePath, 'w+'); 
+					$fh->streamLock(true); 
+					$fh->streamWrite($css); 
+					$fh->streamUnlock(); 
+					$fh->streamClose(); 
+				}
+				catch (Exception $e) {
+					Mage::getSingleton('adminhtml/session')->addError(Mage::helper('themeoptions')->__('Failed creation custom css rules. '.$e->getMessage()));
+				}
+			}
+		}
+	}
+}

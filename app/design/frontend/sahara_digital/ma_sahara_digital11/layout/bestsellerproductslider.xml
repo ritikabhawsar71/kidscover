@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <cms_index_index> 
+        <reference name="right">
+            <block type="bestsellerproductslider/bestsellerproductslider" name="bestsellerproductslider" template="magentothem/bestsellerproductslider/bestsellerproductslider.phtml" /> 
+        </reference>
+    </cms_index_index>
+</layout> 

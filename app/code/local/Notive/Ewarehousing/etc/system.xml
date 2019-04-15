@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <tabs>
+        <Notive_Ewarehousing translate="label" module="ewarehousing">
+            <label>eWarehousing</label>
+            <sort_order>100</sort_order>
+        </Notive_Ewarehousing>
+    </tabs>
+    <sections>
+        <Notive_Ewarehousing>
+            <label>Settings</label>
+            <tab>Notive_Ewarehousing</tab>
+            <sort_order>99</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>0</show_in_store>
+            <groups>
+                <general translate="label comment">
+                    <label>General</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>0</show_in_store>
+                    <expanded>1</expanded>
+                    <comment><![CDATA[Current version: <u>2.2.5</u><br/><br/>]]></comment>
+                    <fields>
+                        <customer_id translate="label comment">
+                            <label>Customer Number</label>
+                            <frontend_type>text</frontend_type>
+                            <comment><![CDATA[Your eWarehousing customer number.]]></comment>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </customer_id>
+                        <username translate="label comment">
+                            <label>Token</label>
+                            <frontend_type>text</frontend_type>
+                            <comment><![CDATA[Your eWarehousing token.]]></comment>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </username>
+                        <password translate="label comment">
+                            <label>Secret</label>
+                            <frontend_type>password</frontend_type>
+                            <comment><![CDATA[Your eWarehousing secret.]]></comment>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </password>
+                    </fields>
+                </general>
+                <order translate="label comment">
+                    <label>Orders</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>0</show_in_store>
+                    <expanded>1</expanded>
+                    <fields>
+                        <enabled translate="label comment">
+                            <label>Enabled</label>
+                            <comment><![CDATA[Orders will be sent to eWarehousing.]]></comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </enabled>
+                        <status_send translate="label comment">
+                            <label>Order status(es) to send</label>
+                            <frontend_type>multiselect</frontend_type>
+                            <comment><![CDATA[When an order gets this status, it will be sent to eWarehousing.]]></comment>
+                            <source_model>notive_ewarehousing/status</source_model>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </status_send>
+                    </fields>
+                </order>
+                <order_status translate="label comment">
+                    <label>Order status</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>2</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>0</show_in_store>
+                    <expanded>1</expanded>
+                    <fields>
+                        <enabled translate="label comment">
+                            <label>Enabled</label>
+                            <comment><![CDATA[The order status will be updated using the eWarehousing services.]]></comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </enabled>
+                    </fields>
+                </order_status>
+                <order_status translate="label comment">
+                    <label>Order status</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>2</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>0</show_in_store>
+                    <expanded>1</expanded>
+                    <fields>
+                        <enabled translate="label comment">
+                            <label>Enabled</label>
+                            <comment><![CDATA[The order status will be updated using the eWarehousing services.]]></comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </enabled>
+                    </fields>
+                </order_status>
+                <stock_sync translate="label comment">
+                    <label>Stock sync</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>3</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>0</show_in_store>
+                    <expanded>1</expanded>
+                    <fields>
+                        <enabled translate="label comment">
+                            <label>Enabled</label>
+                            <comment><![CDATA[The stock levels will be updated using the eWarehousing services.]]></comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </enabled>
+                        <last_sync_date translate="label comment">
+                            <label>Last sync date</label>
+                            <frontend_type>text</frontend_type>
+                            <comment><![CDATA[Last sync date.]]></comment>
+                            <sort_order>1</sort_order>
+                            <show_in_default>0</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </last_sync_date>
+                        <stock_sync_type translate="label comment">
+                            <label>Stock type</label>
+                            <comment>Select the stock you wish to sync with.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>notive_ewarehousing/system_config_source_dropdown_values</source_model>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </stock_sync_type>
+                    </fields>
+                </stock_sync>
+            </groups>
+        </Notive_Ewarehousing>
+    </sections>
+</config>

@@ -1,0 +1,242 @@
+<?php if(Mage::getStoreConfig('newsletterpopup/general/enabled') == 1){ ?>
+<script type="text/javascript">
+	//<![CDATA[
+	
+	function setCookie(cname,cvalue,exdays)
+	{
+	var d = new Date();
+	d.setTime(d.getTime()+(exdays*24*60*60*1000));
+	var expires = "expires="+d.toGMTString();
+	document.cookie = cname+"="+cvalue+"; "+expires;
+	}
+
+	function getCookie(cname)
+	{
+	var name = cname + "=";
+	var ca = document.cookie.split(';');
+	for(var i=0; i < ca.length; i++) 
+	  {
+	  //var c = ca[i].trim();
+	  var c = ca[i];
+	  if (c.indexOf(name)==0) return c.substring(name.length,c.length);
+	  }
+	return "";
+	}
+	 $jq(document).ready(function() {
+			$jq( "#popup_enable" ).click(function( event ) {
+			$jq('#newsletter_pop_up').bPopup({
+				position: ['auto', <?php if(Mage::getStoreConfig('newsletterpopup/general/top') != '') echo Mage::getStoreConfig('newsletterpopup/general/top'); else echo '120'; ?>],
+				easing: 'easeOutBack', //uses jQuery easing plugin
+				speed: <?php if(Mage::getStoreConfig('newsletterpopup/general/speed') != '') echo Mage::getStoreConfig('newsletterpopup/general/speed'); else echo '450' ?>,
+				transition: 'slideDown',
+				 
+			});
+			   })
+			$jq( "#newsletter_pop_up form" ).submit(function( event ) {
+				var email = $jq('#newsletter_subscribe').val();
+				var testEmail = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i;
+				if (testEmail.test(email)){
+					setCookie("shownewsletter",'1',1);
+					return true;
+				}
+				else{
+					$jq('#newsletter_subscribe').addClass('validation-failed');
+					
+					return false;							
+				}
+			});
+			
+			$jq('#newsletter_popup_dont_show_again').on('change', function(){
+				if(getCookie("shownewsletter") != 1){   
+					setCookie("shownewsletter",'1',<?php if(Mage::getStoreConfig('newsletterpopup/general/cookietimeout')!='') echo Mage::getStoreConfig('newsletterpopup/general/cookietimeout');else echo '1' ?>)
+				}else{
+					setCookie("shownewsletter",'0',<?php if(Mage::getStoreConfig('newsletterpopup/general/cookietimeout')!='') echo Mage::getStoreConfig('newsletterpopup/general/cookietimeout');else echo '1' ?>)
+				}
+			}); 
+	 });
+	//]]>
+</script>
+<style>
+.title_subscribe ul, .title_subscribe li {
+	list-style-type: disc !important;
+}
+.sub_ul {
+	font-weight: bold;
+}
+.title_subscribe .item {
+	font-size: 14px;
+	text-align: left;
+	border-bottom: 1px solid #000;
+	height: 30px;
+	padding: 5px 0;
+}
+.title_subscribe .item span {
+	float: left;
+}
+.left_span {width:40% !important;}
+.middle_span {width:5% !important;}
+
+#newsletter_pop_up {
+    height: 90% !important;
+    top: 5% !important;
+    overflow: hidden;
+    margin-top: 0 !important;
+    width: 100% !important;
+    max-width: 790px !important;
+    margin: 0 !important;
+    transform: translate(-50%,0);
+}
+.button.b-close, .button.bClose {
+	top: 0 !important;
+	right: 0 !important;
+}
+#newsletter_pop_up .subscribe-item {
+    overflow-x: hidden;
+    height: 52vh;
+    overflow-y: auto;
+}
+
+</style>
+<!-- Element to pop up -->
+<div id="newsletter_pop_up" style="<?php if(Mage::getStoreConfig('newsletterpopup/general/width') != '') echo 'width:'.Mage::getStoreConfig('newsletterpopup/general/width').'px;'; ?><?php if(Mage::getStoreConfig('newsletterpopup/general/height') != '') echo 'height:'.Mage::getStoreConfig('newsletterpopup/general/height').'px'; ?>">
+	<span class="button b-close"><span>X</span></span>
+	<div class="subscribe">
+		<div class="title_subscribe">
+			<h1>OM HET JUISTE IPAD MODEL TE HERKENNEN, VIND U OP DE ACHERBEHUIZING VAN UW IPAD EEN NUMMER
+<?php //if(Mage::getStoreConfig('newsletterpopup/general/title')) echo Mage::getStoreConfig('newsletterpopup/general/title'); else echo 'Newsletter'; ?></h1>
+		<div class="subscribe-item">
+			<div class="item">
+				<span class="left_span">iPad 2017 = </span>
+				<!-- <span class="middle_span">=</span> -->
+				<span>A1822, A1823</span>
+			</div>
+			<div class="item">
+				<span class="left_span">iPad 2018 = </span>
+				<!-- <span class="middle_span">=</span> -->
+				<span>A1893, A1954</span>
+			</div>
+			<div class="item">
+				<span class="left_span">iPad Air 3 = </span>
+				<!-- <span class="middle_span">=</span> -->
+				<span>A2152, A2123, A2153, A2154</span>
+			</div>
+			<div class="item">
+				<span class="left_span">iPad Air 2 = </span>
+				<!-- <span class="middle_span">=</span> -->
+				<span>A1566, A1567</span>
+			</div>
+			<div class="item">
+				<span class="left_span">iPad Air 1 = </span>
+				<!-- <span class="middle_span">=</span> -->
+				<span>A1474, A1475</span>
+			</div>
+			<div class="item">
+				<span class="left_span">iPad 2 /3 / 4 = </span>
+				<!-- <span class="middle_span">=</span> -->
+				<span>A1458, A1459, A1460, A1416, A1403, A1430. A1395, A1396, A1397</span>
+			</div>
+			<div class="item">
+				<span class="left_span">iPad Mini 1,2,3 = </span>
+				<!-- <span class="middle_span">=</span> -->
+				<span>A1432, A1454, A1455, A1489, A1490, A1491, </span>
+				<span>A1599, A1600</span>
+			</div>
+			
+
+			
+			<div class="item">
+				<span class="left_span">iPad Mini 4 = </span>
+			<!-- 	<span class="middle_span">=</span> -->
+				<span>A1538. A1550</span>
+			</div>
+			<div  class="item"> <!-- style="height: 40px;" -->
+				<span class="left_span">iPad Mini 5 = </span>
+				<span class="middle_span"></span>
+				<span>A2133, A2124, A2126, A2125
+</span>
+			</div>
+			<div  class="item"> <!-- style="height: 40px;" -->
+				<span class="left_span">iPad Pro 11 = </span>
+			<!-- 	<span class="middle_span">=</span> -->
+				<span>A1980, A2013, A1934, A1979</span>
+			</div>
+			<div class="item">
+				<span class="left_span">iPad Pro 10.5 = </span>
+			<!-- 	<span class="middle_span">=</span> -->
+				<span>A1701. A1709, A1852</span>
+			</div>
+			
+			<div class="item">
+				<span class="left_span">iPad Pro 9,7 = </span>
+				<!-- <span class="middle_span">=</span> -->
+				<span>A1674, A1673</span>
+			</div>
+
+			<div class="item">
+				<span class="left_span">iPad Pro 12.9 (2019)</span>
+				<!-- <span class="middle_span">=</span> -->
+				<span>A1876, A2014, A1895, A1983</span>
+			</div>
+			
+			<div class="item">
+				<span class="left_span">iPad Pro 12.9 (2017= </span>
+				<!-- <span class="middle_span">=</span> -->
+				<span>A1670, A1671, A1821</span>
+			</div>
+			
+			<div class="item">
+				<span class="left_span">iPad Pro 12,9 (2016) = </span>
+				<!-- <span class="middle_span">=</span> -->
+				<span>A1584, A1652</span>
+			</div>
+		</div>
+			<!--<ul>
+				<li>iPad Pro 12,9 inch</li>
+				<ul class="sub_ul"><li>A1584, A1652</li></ul>
+				<li>iPad Pro 9,7 inch</li>
+				<ul class="sub_ul"><li>A1674, A1673</li></ul>
+				<li>iPad Air 2</li>
+				<ul class="sub_ul"><li>A1566, A1567</li></ul>
+				<li>iPad Air 1</li>
+				<ul class="sub_ul"><li>A1474, A1475</li></ul>
+				<li>iPad 4</li>
+				<ul class="sub_ul"><li>A1458, A1459, A1460</li></ul>
+				<li>iPad 3</li>
+				<ul class="sub_ul"><li>A1416, A1403, A1430</li></ul>
+				<li>iPad 2</li>
+				<ul class="sub_ul"><li>A1395, A1396, A1397 </li></ul>
+				<li>iPad Mini 1,2 & 3</li>
+				<ul class="sub_ul"><li>A1432, A1454, A1455, A1489, A1490, A1491, A1599, A1600</li></ul>
+				<li>iPad Mini 4</li>
+				<ul class="sub_ul"><li>A1538, A1550</li></ul>
+				<li>iPad 1</li>
+				<ul class="sub_ul"><li>A1319, A1337</li></ul>
+			</ul>-->
+		</div>
+		<?php /* ?><!--
+		<form action="<?php echo $this->getUrl('newsletter/subscriber/new') ?>" method="post" id="newsletter-validate-details">
+			<div class="content_subscribe">
+				<div class="form-subscribe-header">
+					<label><?php if(Mage::getStoreConfig('newsletterpopup/general/content')) echo Mage::getStoreConfig('newsletterpopup/general/content'); else echo 'Subscribe to the Black & White mailing list to receive updates on new arrivals, special offers and other discount information.'; ?></label>
+				</div>
+				<div class="input-box">
+				   <input type="text" name="email" id="newsletter_subscribe" title="<?php echo $this->__('Sign up for our newsletter') ?>" class="input-text required-entry validate-email" />
+				    
+				</div>
+				<div class="actions">
+					<button type="submit" title="<?php echo $this->__('Subscribe') ?>" class="button_subscribe"><span><span><?php echo $this->__('Subscribe') ?></span></span></button>
+				</div>
+			</div>
+		</form>
+		<div class="subscribe-bottom">
+			<input type="checkbox" id="newsletter_popup_dont_show_again"/>
+			<label for="newsletter_popup_dont_show_again"><?php echo $this->__("Don't show this popup again"); ?></label>
+		</div>--><?php */ ?>
+		<script type="text/javascript">
+		//<![CDATA[
+			var newsletterSubscriberFormDetail = new VarienForm('newsletter-validate-details');
+		//]]>
+		</script>
+	</div>
+</div>
+<?php } ?>

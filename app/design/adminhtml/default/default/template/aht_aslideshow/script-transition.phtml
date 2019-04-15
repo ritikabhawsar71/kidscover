@@ -1,0 +1,32 @@
+<script type="text/javascript">
+	document.observe("dom:loaded", function() {
+		setMainSetting();
+		Event.observe($("transition"),'change', function(){
+			setMainSetting();
+		});
+	});
+	
+	function setMainSetting(){
+		var transition = $("transition").value;
+		if(transition=='basic_carousel' || transition == 'thumbnail_slider'){
+                    $('aslideshow_form5').show();
+		    $('aslideshow_form6').hide();
+		    //$('aslideshow_form7').hide();
+		}
+		//else if(transition == 'carousel_min_max'){
+		//    $('aslideshow_form5').show();
+		//    $('aslideshow_form6').show();
+		    //$('aslideshow_form7').hide();
+		//}
+//                else if(transition=='video'){
+//                    $('aslideshow_form7').show();
+//                    $('aslideshow_form5').hide();
+//		    $('aslideshow_form6').hide();
+//                }
+		else{
+                    $('aslideshow_form5').hide();
+		    $('aslideshow_form6').hide();
+                    //$('aslideshow_form7').hide();
+		}
+	}
+</script>

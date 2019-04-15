@@ -1,0 +1,310 @@
+<?xml version="1.0"?>
+<config>
+	<tabs>
+		<magentothem translate="label" module="themeoptions">
+			<label>Magentothem</label>
+			<sort_order>205</sort_order>
+		</magentothem>
+	</tabs>
+	<sections>
+		<themeoptions translate="label" module="themeoptions">
+			<label>Theme Options</label>
+			<tab>magentothem</tab>
+			<sort_order>131</sort_order>
+			<show_in_default>1</show_in_default>
+			<show_in_website>1</show_in_website>
+			<show_in_store>1</show_in_store>
+			<groups>
+				<themeoptions_config translate="label">
+					<label>Theme Options Config</label>
+					<frontend_type>text</frontend_type>
+					<sort_order>1</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<new_label translate="label comment">
+							<label>New Label: </label>
+							<frontend_type>select</frontend_type>
+							<source_model>
+								adminhtml/system_config_source_yesno
+							</source_model>
+							<sort_order>1</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>							
+						</new_label>
+						<sale_label translate="label comment">
+							<label>Sale Label: </label>
+							<frontend_type>select</frontend_type>
+							<source_model>
+								adminhtml/system_config_source_yesno
+							</source_model>
+							<sort_order>2</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>							
+						</sale_label>
+						<reset_css translate="label comment">
+							<label>Reset Css: </label>
+							<frontend_type>select</frontend_type>
+							<source_model>
+								adminhtml/system_config_source_yesno
+							</source_model>
+							<sort_order>3</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>							
+						</reset_css>
+						 
+						<font_content_main translate="label comment">
+							<label>Font Content replacement:</label>
+							<frontend_type>Select</frontend_type>
+							<source_model>themeoptions/config_fontreplacement</source_model>
+							<sort_order>7</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<depends>
+								<reset_css>0</reset_css>
+							</depends>
+						</font_content_main>
+						<font_content>
+							<label>Font Text:</label>
+							<frontend_type>select</frontend_type>
+                            <source_model>themeoptions/config_customfieldfont</source_model>
+							<frontend_model>themeoptions/adminhtml_system_config_form_field_customfieldfontcontent</frontend_model>
+							<sort_order>8</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<depends>
+								<font_content_main>1</font_content_main>
+								<reset_css>0</reset_css>
+							</depends>
+						</font_content>
+						<font_contentweight>
+							<label>Font Weight Text:</label>
+							<frontend_type>select</frontend_type>
+                            <source_model>themeoptions/config_customfieldweight</source_model>
+							<sort_order>9</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<depends>
+								<font_content_main>1</font_content_main>
+								<reset_css>0</reset_css>
+							</depends>
+						</font_contentweight>
+						
+						<font_price_main translate="label comment">
+							<label>Font Price replacement:</label>
+							<frontend_type>Select</frontend_type>
+							<source_model>themeoptions/config_fontreplacement</source_model>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<depends>
+								<reset_css>0</reset_css>
+							</depends>
+						</font_price_main>
+						<font_price>
+							<label>Font Price:</label>
+							<frontend_type>select</frontend_type>
+                            <source_model>themeoptions/config_customfieldfont</source_model>
+							<frontend_model>themeoptions/adminhtml_system_config_form_field_customfieldfontcontent</frontend_model>
+							<sort_order>11</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<depends>
+								<font_price_main>1</font_price_main>
+								<reset_css>0</reset_css>
+							</depends>
+						</font_price>
+						<font_priceweight>
+							<label>Font Weight Price:</label>
+							<frontend_type>select</frontend_type>
+                            <source_model>themeoptions/config_customfieldweight</source_model>
+							<sort_order>12</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<depends>
+								<font_price_main>1</font_price_main>
+								<reset_css>0</reset_css>
+							</depends>
+						</font_priceweight>
+						
+						 <color>
+							<label>Color: </label> 
+							<frontend_type>text</frontend_type>
+							<frontend_model>themeoptions/adminhtml_system_config_form_field_customfieldcolor</frontend_model>
+							<sort_order>13</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<depends>
+								<reset_css>0</reset_css>
+							</depends>
+						</color>
+						<color_tag>
+							<label>Color Tags: </label>
+							<frontend_type>textarea</frontend_type>
+							<sort_order>14</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<depends>
+								<reset_css>0</reset_css>
+							</depends>
+						</color_tag>
+						<color_hover>
+							<label>Color Hover: </label> 
+							<frontend_type>text</frontend_type>
+							<frontend_model>themeoptions/adminhtml_system_config_form_field_customfieldcolor</frontend_model>
+							<sort_order>15</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<depends>
+								<reset_css>0</reset_css>
+							</depends>
+						</color_hover>
+						<color_hover_tag>
+							<label>Color Hover Tags: </label>
+							<frontend_type>textarea</frontend_type>
+							<sort_order>16</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<depends>
+								<reset_css>0</reset_css>
+							</depends>
+						</color_hover_tag>
+						
+						<text_color>
+							<label>Text Color: </label> 
+							<frontend_type>text</frontend_type>
+							<frontend_model>themeoptions/adminhtml_system_config_form_field_customfieldcolor</frontend_model>
+							<sort_order>17</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<depends>
+								<reset_css>0</reset_css>
+							</depends>
+						</text_color>
+						<text_color_tag>
+							<label>Text Color Tags: </label>
+							<frontend_type>textarea</frontend_type>
+							<sort_order>18</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<depends>
+								<reset_css>0</reset_css>
+							</depends>
+						</text_color_tag>
+						
+						<text_color_hover>
+							<label>Text Color Hover: </label> 
+							<frontend_type>text</frontend_type>
+							<frontend_model>themeoptions/adminhtml_system_config_form_field_customfieldcolor</frontend_model>
+							<sort_order>19</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<depends>
+								<reset_css>0</reset_css>
+							</depends>
+						</text_color_hover>
+						<text_color_hover_tag>
+							<label>Text Color Hover Tags: </label>
+							<frontend_type>textarea</frontend_type>
+							<sort_order>20</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<depends>
+								<reset_css>0</reset_css>
+							</depends>
+						</text_color_hover_tag>
+						<border>
+							<label>Border Color</label> 
+							<frontend_type>text</frontend_type>
+							<frontend_model>themeoptions/adminhtml_system_config_form_field_customfieldcolor</frontend_model>
+							<sort_order>21</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<depends>
+								<reset_css>0</reset_css>
+							</depends>
+						</border>
+						<border_tag>
+							<label>Border Tags: </label>
+							<frontend_type>textarea</frontend_type>
+							<sort_order>22</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<depends>
+								<reset_css>0</reset_css>
+							</depends>
+						</border_tag>
+						<border_hover>
+							<label>Border Color Hover</label> 
+							<frontend_type>text</frontend_type>
+							<frontend_model>themeoptions/adminhtml_system_config_form_field_customfieldcolor</frontend_model>
+							<sort_order>23</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<depends>
+								<reset_css>0</reset_css>
+							</depends>
+						</border_hover>
+						<border_hover_tag>
+							<label>Border Hover Tags: </label>
+							<frontend_type>textarea</frontend_type>
+							<sort_order>24</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<depends>
+								<reset_css>0</reset_css>
+							</depends>
+						</border_hover_tag>
+						<bg_color>
+							<label>BG Color: </label>
+							<frontend_type>text</frontend_type>
+							<frontend_model>themeoptions/adminhtml_system_config_form_field_customfieldcolor</frontend_model>
+							<sort_order>25</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<depends>
+								<reset_css>0</reset_css>
+							</depends>
+						</bg_color>
+						<bg_pattern>
+							<label>BG Pattern: </label>
+							<frontend_type>radios</frontend_type>
+							<source_model>themeoptions/config_customfieldpattern</source_model>
+                            <frontend_model>themeoptions/adminhtml_system_config_form_field_customfieldpattern</frontend_model>
+							<sort_order>26</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<depends>
+								<reset_css>0</reset_css>
+							</depends>
+						</bg_pattern>
+					</fields>
+				</themeoptions_config>						
+			</groups>
+		</themeoptions>
+	</sections>
+</config>

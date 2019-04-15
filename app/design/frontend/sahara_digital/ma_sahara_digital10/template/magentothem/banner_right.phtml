@@ -1,0 +1,3 @@
+ 
+ <?php $block = Mage::getModel('cms/block')->setStoreId(Mage::app()->getStore()->getId())->load('banner_right');
+     echo Mage::getSingleton('widget/template_filter')->filter($block->getContent());?>

@@ -1,0 +1,754 @@
+2017-07-09T12:33:50+00:00 ERR (3): 
+Mage_Core_Exception: Ongeldig bloktype: Mage_Vmegamenu_Block_Vmegamenu in /home/kidscove/public_html/app/Mage.php:595
+Stack trace:
+#0 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(495): Mage::throwException('Ongeldig blokty...')
+#1 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(437): Mage_Core_Model_Layout->_getBlockInstance('Mage_Vmegamenu_...', Array)
+#2 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(472): Mage_Core_Model_Layout->createBlock('vmegamenu/vmega...', 'header.vmegamen...')
+#3 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(239): Mage_Core_Model_Layout->addBlock('vmegamenu/vmega...', 'header.vmegamen...')
+#4 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(205): Mage_Core_Model_Layout->_generateBlock(Object(Mage_Core_Model_Layout_Element), Object(Mage_Core_Model_Layout_Element))
+#5 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(206): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#6 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(206): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#7 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(344): Mage_Core_Model_Layout->generateBlocks()
+#8 /home/kidscove/public_html/app/code/local/Magentothem/Layerednavigationajax/controllers/CategoryController.php(118): Mage_Core_Controller_Varien_Action->generateLayoutBlocks()
+#9 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(418): Magentothem_Layerednavigationajax_CategoryController->viewAction()
+#10 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('view')
+#11 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#12 /home/kidscove/public_html/app/code/core/Mage/Core/Model/App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#13 /home/kidscove/public_html/app/Mage.php(683): Mage_Core_Model_App->run(Array)
+#14 /home/kidscove/public_html/index.php(83): Mage::run('', 'store')
+#15 {main}
+2017-07-27T19:43:57+00:00 ERR (3): 
+Mage_Core_Exception: Ongeldig bloktype: Mage_Vmegamenu_Block_Vmegamenu in /home/kidscove/public_html/app/Mage.php:595
+Stack trace:
+#0 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(495): Mage::throwException('Ongeldig blokty...')
+#1 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(437): Mage_Core_Model_Layout->_getBlockInstance('Mage_Vmegamenu_...', Array)
+#2 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(472): Mage_Core_Model_Layout->createBlock('vmegamenu/vmega...', 'header.vmegamen...')
+#3 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(239): Mage_Core_Model_Layout->addBlock('vmegamenu/vmega...', 'header.vmegamen...')
+#4 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(205): Mage_Core_Model_Layout->_generateBlock(Object(Mage_Core_Model_Layout_Element), Object(Mage_Core_Model_Layout_Element))
+#5 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(206): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#6 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(206): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#7 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(344): Mage_Core_Model_Layout->generateBlocks()
+#8 /home/kidscove/public_html/app/code/core/Mage/Cms/Helper/Page.php(113): Mage_Core_Controller_Varien_Action->generateLayoutBlocks()
+#9 /home/kidscove/public_html/app/code/core/Mage/Cms/Helper/Page.php(52): Mage_Cms_Helper_Page->_renderPage(Object(Mage_Cms_IndexController), 'no-route')
+#10 /home/kidscove/public_html/app/code/core/Mage/Cms/controllers/IndexController.php(75): Mage_Cms_Helper_Page->renderPage(Object(Mage_Cms_IndexController), 'no-route')
+#11 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(418): Mage_Cms_IndexController->noRouteAction()
+#12 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('noRoute')
+#13 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#14 /home/kidscove/public_html/app/code/core/Mage/Core/Model/App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#15 /home/kidscove/public_html/app/Mage.php(683): Mage_Core_Model_App->run(Array)
+#16 /home/kidscove/public_html/index.php(83): Mage::run('', 'store')
+#17 {main}
+2017-07-27T19:44:31+00:00 ERR (3): 
+Mage_Core_Exception: Ongeldig bloktype: Mage_Vmegamenu_Block_Vmegamenu in /home/kidscove/public_html/app/Mage.php:595
+Stack trace:
+#0 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(495): Mage::throwException('Ongeldig blokty...')
+#1 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(437): Mage_Core_Model_Layout->_getBlockInstance('Mage_Vmegamenu_...', Array)
+#2 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(472): Mage_Core_Model_Layout->createBlock('vmegamenu/vmega...', 'header.vmegamen...')
+#3 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(239): Mage_Core_Model_Layout->addBlock('vmegamenu/vmega...', 'header.vmegamen...')
+#4 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(205): Mage_Core_Model_Layout->_generateBlock(Object(Mage_Core_Model_Layout_Element), Object(Mage_Core_Model_Layout_Element))
+#5 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(206): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#6 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(206): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#7 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(344): Mage_Core_Model_Layout->generateBlocks()
+#8 /home/kidscove/public_html/app/code/local/Magentothem/Layerednavigationajax/controllers/CategoryController.php(118): Mage_Core_Controller_Varien_Action->generateLayoutBlocks()
+#9 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(418): Magentothem_Layerednavigationajax_CategoryController->viewAction()
+#10 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('view')
+#11 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#12 /home/kidscove/public_html/app/code/core/Mage/Core/Model/App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#13 /home/kidscove/public_html/app/Mage.php(683): Mage_Core_Model_App->run(Array)
+#14 /home/kidscove/public_html/index.php(83): Mage::run('', 'store')
+#15 {main}
+2017-07-27T19:44:34+00:00 ERR (3): 
+Mage_Core_Exception: Ongeldig bloktype: Mage_Vmegamenu_Block_Vmegamenu in /home/kidscove/public_html/app/Mage.php:595
+Stack trace:
+#0 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(495): Mage::throwException('Ongeldig blokty...')
+#1 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(437): Mage_Core_Model_Layout->_getBlockInstance('Mage_Vmegamenu_...', Array)
+#2 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(472): Mage_Core_Model_Layout->createBlock('vmegamenu/vmega...', 'header.vmegamen...')
+#3 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(239): Mage_Core_Model_Layout->addBlock('vmegamenu/vmega...', 'header.vmegamen...')
+#4 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(205): Mage_Core_Model_Layout->_generateBlock(Object(Mage_Core_Model_Layout_Element), Object(Mage_Core_Model_Layout_Element))
+#5 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(206): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#6 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(206): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#7 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(344): Mage_Core_Model_Layout->generateBlocks()
+#8 /home/kidscove/public_html/app/code/local/Magentothem/Layerednavigationajax/controllers/CategoryController.php(118): Mage_Core_Controller_Varien_Action->generateLayoutBlocks()
+#9 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(418): Magentothem_Layerednavigationajax_CategoryController->viewAction()
+#10 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('view')
+#11 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#12 /home/kidscove/public_html/app/code/core/Mage/Core/Model/App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#13 /home/kidscove/public_html/app/Mage.php(683): Mage_Core_Model_App->run(Array)
+#14 /home/kidscove/public_html/index.php(83): Mage::run('', 'store')
+#15 {main}
+2017-07-27T19:44:41+00:00 ERR (3): 
+Mage_Core_Exception: Ongeldig bloktype: Mage_Vmegamenu_Block_Vmegamenu in /home/kidscove/public_html/app/Mage.php:595
+Stack trace:
+#0 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(495): Mage::throwException('Ongeldig blokty...')
+#1 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(437): Mage_Core_Model_Layout->_getBlockInstance('Mage_Vmegamenu_...', Array)
+#2 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(472): Mage_Core_Model_Layout->createBlock('vmegamenu/vmega...', 'header.vmegamen...')
+#3 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(239): Mage_Core_Model_Layout->addBlock('vmegamenu/vmega...', 'header.vmegamen...')
+#4 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(205): Mage_Core_Model_Layout->_generateBlock(Object(Mage_Core_Model_Layout_Element), Object(Mage_Core_Model_Layout_Element))
+#5 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(206): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#6 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(206): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#7 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(344): Mage_Core_Model_Layout->generateBlocks()
+#8 /home/kidscove/public_html/app/code/local/Magentothem/Layerednavigationajax/controllers/CategoryController.php(59): Mage_Core_Controller_Varien_Action->generateLayoutBlocks()
+#9 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(418): Magentothem_Layerednavigationajax_CategoryController->viewAction()
+#10 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('view')
+#11 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#12 /home/kidscove/public_html/app/code/core/Mage/Core/Model/App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#13 /home/kidscove/public_html/app/Mage.php(683): Mage_Core_Model_App->run(Array)
+#14 /home/kidscove/public_html/index.php(83): Mage::run('', 'store')
+#15 {main}
+2017-07-27T19:44:41+00:00 ERR (3): 
+Mage_Core_Exception: Ongeldig bloktype: Mage_Vmegamenu_Block_Vmegamenu in /home/kidscove/public_html/app/Mage.php:595
+Stack trace:
+#0 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(495): Mage::throwException('Ongeldig blokty...')
+#1 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(437): Mage_Core_Model_Layout->_getBlockInstance('Mage_Vmegamenu_...', Array)
+#2 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(472): Mage_Core_Model_Layout->createBlock('vmegamenu/vmega...', 'header.vmegamen...')
+#3 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(239): Mage_Core_Model_Layout->addBlock('vmegamenu/vmega...', 'header.vmegamen...')
+#4 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(205): Mage_Core_Model_Layout->_generateBlock(Object(Mage_Core_Model_Layout_Element), Object(Mage_Core_Model_Layout_Element))
+#5 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(206): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#6 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(206): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#7 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(344): Mage_Core_Model_Layout->generateBlocks()
+#8 /home/kidscove/public_html/app/code/local/Magentothem/Layerednavigationajax/controllers/CategoryController.php(59): Mage_Core_Controller_Varien_Action->generateLayoutBlocks()
+#9 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(418): Magentothem_Layerednavigationajax_CategoryController->viewAction()
+#10 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('view')
+#11 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#12 /home/kidscove/public_html/app/code/core/Mage/Core/Model/App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#13 /home/kidscove/public_html/app/Mage.php(683): Mage_Core_Model_App->run(Array)
+#14 /home/kidscove/public_html/index.php(83): Mage::run('', 'store')
+#15 {main}
+2017-07-27T19:45:15+00:00 ERR (3): 
+Mage_Core_Exception: Ongeldig bloktype: Mage_Vmegamenu_Block_Vmegamenu in /home/kidscove/public_html/app/Mage.php:595
+Stack trace:
+#0 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(495): Mage::throwException('Ongeldig blokty...')
+#1 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(437): Mage_Core_Model_Layout->_getBlockInstance('Mage_Vmegamenu_...', Array)
+#2 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(472): Mage_Core_Model_Layout->createBlock('vmegamenu/vmega...', 'header.vmegamen...')
+#3 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(239): Mage_Core_Model_Layout->addBlock('vmegamenu/vmega...', 'header.vmegamen...')
+#4 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(205): Mage_Core_Model_Layout->_generateBlock(Object(Mage_Core_Model_Layout_Element), Object(Mage_Core_Model_Layout_Element))
+#5 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(206): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#6 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(206): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#7 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(344): Mage_Core_Model_Layout->generateBlocks()
+#8 /home/kidscove/public_html/app/code/core/Mage/Cms/Helper/Page.php(113): Mage_Core_Controller_Varien_Action->generateLayoutBlocks()
+#9 /home/kidscove/public_html/app/code/core/Mage/Cms/Helper/Page.php(52): Mage_Cms_Helper_Page->_renderPage(Object(Mage_Cms_IndexController), 'home')
+#10 /home/kidscove/public_html/app/code/core/Mage/Cms/controllers/IndexController.php(45): Mage_Cms_Helper_Page->renderPage(Object(Mage_Cms_IndexController), 'home')
+#11 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(418): Mage_Cms_IndexController->indexAction()
+#12 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('index')
+#13 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#14 /home/kidscove/public_html/app/code/core/Mage/Core/Model/App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#15 /home/kidscove/public_html/app/Mage.php(683): Mage_Core_Model_App->run(Array)
+#16 /home/kidscove/public_html/index.php(83): Mage::run('', 'store')
+#17 {main}
+2017-07-27T19:45:46+00:00 ERR (3): 
+Mage_Core_Exception: Ongeldig bloktype: Mage_Vmegamenu_Block_Vmegamenu in /home/kidscove/public_html/app/Mage.php:595
+Stack trace:
+#0 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(495): Mage::throwException('Ongeldig blokty...')
+#1 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(437): Mage_Core_Model_Layout->_getBlockInstance('Mage_Vmegamenu_...', Array)
+#2 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(472): Mage_Core_Model_Layout->createBlock('vmegamenu/vmega...', 'header.vmegamen...')
+#3 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(239): Mage_Core_Model_Layout->addBlock('vmegamenu/vmega...', 'header.vmegamen...')
+#4 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(205): Mage_Core_Model_Layout->_generateBlock(Object(Mage_Core_Model_Layout_Element), Object(Mage_Core_Model_Layout_Element))
+#5 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(206): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#6 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(206): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#7 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(344): Mage_Core_Model_Layout->generateBlocks()
+#8 /home/kidscove/public_html/app/code/local/Magentothem/Layerednavigationajax/controllers/CategoryController.php(59): Mage_Core_Controller_Varien_Action->generateLayoutBlocks()
+#9 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(418): Magentothem_Layerednavigationajax_CategoryController->viewAction()
+#10 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('view')
+#11 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#12 /home/kidscove/public_html/app/code/core/Mage/Core/Model/App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#13 /home/kidscove/public_html/app/Mage.php(683): Mage_Core_Model_App->run(Array)
+#14 /home/kidscove/public_html/index.php(83): Mage::run('', 'store')
+#15 {main}
+2017-07-27T19:45:46+00:00 ERR (3): 
+Mage_Core_Exception: Ongeldig bloktype: Mage_Vmegamenu_Block_Vmegamenu in /home/kidscove/public_html/app/Mage.php:595
+Stack trace:
+#0 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(495): Mage::throwException('Ongeldig blokty...')
+#1 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(437): Mage_Core_Model_Layout->_getBlockInstance('Mage_Vmegamenu_...', Array)
+#2 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(472): Mage_Core_Model_Layout->createBlock('vmegamenu/vmega...', 'header.vmegamen...')
+#3 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(239): Mage_Core_Model_Layout->addBlock('vmegamenu/vmega...', 'header.vmegamen...')
+#4 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(205): Mage_Core_Model_Layout->_generateBlock(Object(Mage_Core_Model_Layout_Element), Object(Mage_Core_Model_Layout_Element))
+#5 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(206): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#6 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(206): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#7 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(344): Mage_Core_Model_Layout->generateBlocks()
+#8 /home/kidscove/public_html/app/code/local/Magentothem/Layerednavigationajax/controllers/CategoryController.php(59): Mage_Core_Controller_Varien_Action->generateLayoutBlocks()
+#9 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(418): Magentothem_Layerednavigationajax_CategoryController->viewAction()
+#10 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('view')
+#11 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#12 /home/kidscove/public_html/app/code/core/Mage/Core/Model/App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#13 /home/kidscove/public_html/app/Mage.php(683): Mage_Core_Model_App->run(Array)
+#14 /home/kidscove/public_html/index.php(83): Mage::run('', 'store')
+#15 {main}
+2017-07-27T19:46:12+00:00 ERR (3): 
+Mage_Core_Exception: Ongeldig bloktype: Mage_Vmegamenu_Block_Vmegamenu in /home/kidscove/public_html/app/Mage.php:595
+Stack trace:
+#0 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(495): Mage::throwException('Ongeldig blokty...')
+#1 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(437): Mage_Core_Model_Layout->_getBlockInstance('Mage_Vmegamenu_...', Array)
+#2 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(472): Mage_Core_Model_Layout->createBlock('vmegamenu/vmega...', 'header.vmegamen...')
+#3 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(239): Mage_Core_Model_Layout->addBlock('vmegamenu/vmega...', 'header.vmegamen...')
+#4 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(205): Mage_Core_Model_Layout->_generateBlock(Object(Mage_Core_Model_Layout_Element), Object(Mage_Core_Model_Layout_Element))
+#5 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(206): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#6 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(206): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#7 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(344): Mage_Core_Model_Layout->generateBlocks()
+#8 /home/kidscove/public_html/app/code/core/Mage/Cms/Helper/Page.php(113): Mage_Core_Controller_Varien_Action->generateLayoutBlocks()
+#9 /home/kidscove/public_html/app/code/core/Mage/Cms/Helper/Page.php(52): Mage_Cms_Helper_Page->_renderPage(Object(Mage_Cms_IndexController), 'no-route')
+#10 /home/kidscove/public_html/app/code/core/Mage/Cms/controllers/IndexController.php(75): Mage_Cms_Helper_Page->renderPage(Object(Mage_Cms_IndexController), 'no-route')
+#11 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(418): Mage_Cms_IndexController->noRouteAction()
+#12 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('noRoute')
+#13 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#14 /home/kidscove/public_html/app/code/core/Mage/Core/Model/App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#15 /home/kidscove/public_html/app/Mage.php(683): Mage_Core_Model_App->run(Array)
+#16 /home/kidscove/public_html/index.php(83): Mage::run('', 'store')
+#17 {main}
+2017-07-27T19:50:06+00:00 ERR (3): 
+Mage_Core_Exception: Ongeldig bloktype: Mage_Vmegamenu_Block_Vmegamenu in /home/kidscove/public_html/app/Mage.php:595
+Stack trace:
+#0 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(495): Mage::throwException('Ongeldig blokty...')
+#1 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(437): Mage_Core_Model_Layout->_getBlockInstance('Mage_Vmegamenu_...', Array)
+#2 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(472): Mage_Core_Model_Layout->createBlock('vmegamenu/vmega...', 'header.vmegamen...')
+#3 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(239): Mage_Core_Model_Layout->addBlock('vmegamenu/vmega...', 'header.vmegamen...')
+#4 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(205): Mage_Core_Model_Layout->_generateBlock(Object(Mage_Core_Model_Layout_Element), Object(Mage_Core_Model_Layout_Element))
+#5 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(206): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#6 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(206): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#7 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(344): Mage_Core_Model_Layout->generateBlocks()
+#8 /home/kidscove/public_html/app/code/local/Magentothem/Layerednavigationajax/controllers/CategoryController.php(59): Mage_Core_Controller_Varien_Action->generateLayoutBlocks()
+#9 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(418): Magentothem_Layerednavigationajax_CategoryController->viewAction()
+#10 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('view')
+#11 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#12 /home/kidscove/public_html/app/code/core/Mage/Core/Model/App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#13 /home/kidscove/public_html/app/Mage.php(683): Mage_Core_Model_App->run(Array)
+#14 /home/kidscove/public_html/index.php(83): Mage::run('', 'store')
+#15 {main}
+2017-07-27T19:50:06+00:00 ERR (3): 
+Mage_Core_Exception: Ongeldig bloktype: Mage_Vmegamenu_Block_Vmegamenu in /home/kidscove/public_html/app/Mage.php:595
+Stack trace:
+#0 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(495): Mage::throwException('Ongeldig blokty...')
+#1 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(437): Mage_Core_Model_Layout->_getBlockInstance('Mage_Vmegamenu_...', Array)
+#2 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(472): Mage_Core_Model_Layout->createBlock('vmegamenu/vmega...', 'header.vmegamen...')
+#3 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(239): Mage_Core_Model_Layout->addBlock('vmegamenu/vmega...', 'header.vmegamen...')
+#4 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(205): Mage_Core_Model_Layout->_generateBlock(Object(Mage_Core_Model_Layout_Element), Object(Mage_Core_Model_Layout_Element))
+#5 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(206): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#6 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(206): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#7 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(344): Mage_Core_Model_Layout->generateBlocks()
+#8 /home/kidscove/public_html/app/code/local/Magentothem/Layerednavigationajax/controllers/CategoryController.php(59): Mage_Core_Controller_Varien_Action->generateLayoutBlocks()
+#9 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(418): Magentothem_Layerednavigationajax_CategoryController->viewAction()
+#10 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('view')
+#11 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#12 /home/kidscove/public_html/app/code/core/Mage/Core/Model/App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#13 /home/kidscove/public_html/app/Mage.php(683): Mage_Core_Model_App->run(Array)
+#14 /home/kidscove/public_html/index.php(83): Mage::run('', 'store')
+#15 {main}
+2017-07-27T19:50:26+00:00 ERR (3): 
+Mage_Core_Exception: Ongeldig bloktype: Mage_Vmegamenu_Block_Vmegamenu in /home/kidscove/public_html/app/Mage.php:595
+Stack trace:
+#0 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(495): Mage::throwException('Ongeldig blokty...')
+#1 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(437): Mage_Core_Model_Layout->_getBlockInstance('Mage_Vmegamenu_...', Array)
+#2 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(472): Mage_Core_Model_Layout->createBlock('vmegamenu/vmega...', 'header.vmegamen...')
+#3 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(239): Mage_Core_Model_Layout->addBlock('vmegamenu/vmega...', 'header.vmegamen...')
+#4 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(205): Mage_Core_Model_Layout->_generateBlock(Object(Mage_Core_Model_Layout_Element), Object(Mage_Core_Model_Layout_Element))
+#5 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(206): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#6 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(206): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#7 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(344): Mage_Core_Model_Layout->generateBlocks()
+#8 /home/kidscove/public_html/app/code/local/Magentothem/Layerednavigationajax/controllers/CategoryController.php(59): Mage_Core_Controller_Varien_Action->generateLayoutBlocks()
+#9 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(418): Magentothem_Layerednavigationajax_CategoryController->viewAction()
+#10 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('view')
+#11 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#12 /home/kidscove/public_html/app/code/core/Mage/Core/Model/App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#13 /home/kidscove/public_html/app/Mage.php(683): Mage_Core_Model_App->run(Array)
+#14 /home/kidscove/public_html/index.php(83): Mage::run('', 'store')
+#15 {main}
+2017-07-27T19:50:26+00:00 ERR (3): 
+Mage_Core_Exception: Ongeldig bloktype: Mage_Vmegamenu_Block_Vmegamenu in /home/kidscove/public_html/app/Mage.php:595
+Stack trace:
+#0 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(495): Mage::throwException('Ongeldig blokty...')
+#1 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(437): Mage_Core_Model_Layout->_getBlockInstance('Mage_Vmegamenu_...', Array)
+#2 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(472): Mage_Core_Model_Layout->createBlock('vmegamenu/vmega...', 'header.vmegamen...')
+#3 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(239): Mage_Core_Model_Layout->addBlock('vmegamenu/vmega...', 'header.vmegamen...')
+#4 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(205): Mage_Core_Model_Layout->_generateBlock(Object(Mage_Core_Model_Layout_Element), Object(Mage_Core_Model_Layout_Element))
+#5 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(206): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#6 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(206): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#7 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(344): Mage_Core_Model_Layout->generateBlocks()
+#8 /home/kidscove/public_html/app/code/local/Magentothem/Layerednavigationajax/controllers/CategoryController.php(59): Mage_Core_Controller_Varien_Action->generateLayoutBlocks()
+#9 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(418): Magentothem_Layerednavigationajax_CategoryController->viewAction()
+#10 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('view')
+#11 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#12 /home/kidscove/public_html/app/code/core/Mage/Core/Model/App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#13 /home/kidscove/public_html/app/Mage.php(683): Mage_Core_Model_App->run(Array)
+#14 /home/kidscove/public_html/index.php(83): Mage::run('', 'store')
+#15 {main}
+2017-07-27T19:51:51+00:00 ERR (3): 
+Mage_Core_Exception: Ongeldig bloktype: Mage_Vmegamenu_Block_Vmegamenu in /home/kidscove/public_html/app/Mage.php:595
+Stack trace:
+#0 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(495): Mage::throwException('Ongeldig blokty...')
+#1 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(437): Mage_Core_Model_Layout->_getBlockInstance('Mage_Vmegamenu_...', Array)
+#2 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(472): Mage_Core_Model_Layout->createBlock('vmegamenu/vmega...', 'header.vmegamen...')
+#3 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(239): Mage_Core_Model_Layout->addBlock('vmegamenu/vmega...', 'header.vmegamen...')
+#4 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(205): Mage_Core_Model_Layout->_generateBlock(Object(Mage_Core_Model_Layout_Element), Object(Mage_Core_Model_Layout_Element))
+#5 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(206): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#6 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(206): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#7 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(344): Mage_Core_Model_Layout->generateBlocks()
+#8 /home/kidscove/public_html/app/code/core/Mage/Cms/Helper/Page.php(113): Mage_Core_Controller_Varien_Action->generateLayoutBlocks()
+#9 /home/kidscove/public_html/app/code/core/Mage/Cms/Helper/Page.php(52): Mage_Cms_Helper_Page->_renderPage(Object(Mage_Cms_IndexController), 'home')
+#10 /home/kidscove/public_html/app/code/core/Mage/Cms/controllers/IndexController.php(45): Mage_Cms_Helper_Page->renderPage(Object(Mage_Cms_IndexController), 'home')
+#11 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(418): Mage_Cms_IndexController->indexAction()
+#12 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('index')
+#13 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#14 /home/kidscove/public_html/app/code/core/Mage/Core/Model/App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#15 /home/kidscove/public_html/app/Mage.php(683): Mage_Core_Model_App->run(Array)
+#16 /home/kidscove/public_html/index.php(83): Mage::run('', 'store')
+#17 {main}
+2017-07-27T19:52:46+00:00 ERR (3): 
+Mage_Core_Exception: Ongeldig bloktype: Mage_Vmegamenu_Block_Vmegamenu in /home/kidscove/public_html/app/Mage.php:595
+Stack trace:
+#0 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(495): Mage::throwException('Ongeldig blokty...')
+#1 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(437): Mage_Core_Model_Layout->_getBlockInstance('Mage_Vmegamenu_...', Array)
+#2 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(472): Mage_Core_Model_Layout->createBlock('vmegamenu/vmega...', 'header.vmegamen...')
+#3 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(239): Mage_Core_Model_Layout->addBlock('vmegamenu/vmega...', 'header.vmegamen...')
+#4 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(205): Mage_Core_Model_Layout->_generateBlock(Object(Mage_Core_Model_Layout_Element), Object(Mage_Core_Model_Layout_Element))
+#5 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(206): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#6 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(206): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#7 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(344): Mage_Core_Model_Layout->generateBlocks()
+#8 /home/kidscove/public_html/app/code/local/Magentothem/Layerednavigationajax/controllers/CategoryController.php(59): Mage_Core_Controller_Varien_Action->generateLayoutBlocks()
+#9 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(418): Magentothem_Layerednavigationajax_CategoryController->viewAction()
+#10 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('view')
+#11 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#12 /home/kidscove/public_html/app/code/core/Mage/Core/Model/App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#13 /home/kidscove/public_html/app/Mage.php(683): Mage_Core_Model_App->run(Array)
+#14 /home/kidscove/public_html/index.php(83): Mage::run('', 'store')
+#15 {main}
+2017-07-27T19:52:46+00:00 ERR (3): 
+Mage_Core_Exception: Ongeldig bloktype: catalog.leftnav in /home/kidscove/public_html/app/Mage.php:595
+Stack trace:
+#0 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(495): Mage::throwException('Ongeldig blokty...')
+#1 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(437): Mage_Core_Model_Layout->_getBlockInstance('catalog.leftnav', Array)
+#2 /home/kidscove/public_html/app/code/local/Magentothem/Layerednavigationajax/controllers/CategoryController.php(60): Mage_Core_Model_Layout->createBlock('catalog.leftnav')
+#3 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(418): Magentothem_Layerednavigationajax_CategoryController->viewAction()
+#4 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('view')
+#5 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#6 /home/kidscove/public_html/app/code/core/Mage/Core/Model/App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#7 /home/kidscove/public_html/app/Mage.php(683): Mage_Core_Model_App->run(Array)
+#8 /home/kidscove/public_html/index.php(83): Mage::run('', 'store')
+#9 {main}
+2017-07-27T19:52:46+00:00 ERR (3): 
+Mage_Core_Exception: Ongeldig bloktype: Mage_Vmegamenu_Block_Vmegamenu in /home/kidscove/public_html/app/Mage.php:595
+Stack trace:
+#0 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(495): Mage::throwException('Ongeldig blokty...')
+#1 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(437): Mage_Core_Model_Layout->_getBlockInstance('Mage_Vmegamenu_...', Array)
+#2 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(472): Mage_Core_Model_Layout->createBlock('vmegamenu/vmega...', 'header.vmegamen...')
+#3 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(239): Mage_Core_Model_Layout->addBlock('vmegamenu/vmega...', 'header.vmegamen...')
+#4 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(205): Mage_Core_Model_Layout->_generateBlock(Object(Mage_Core_Model_Layout_Element), Object(Mage_Core_Model_Layout_Element))
+#5 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(206): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#6 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(206): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#7 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(344): Mage_Core_Model_Layout->generateBlocks()
+#8 /home/kidscove/public_html/app/code/local/Magentothem/Layerednavigationajax/controllers/CategoryController.php(59): Mage_Core_Controller_Varien_Action->generateLayoutBlocks()
+#9 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(418): Magentothem_Layerednavigationajax_CategoryController->viewAction()
+#10 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('view')
+#11 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#12 /home/kidscove/public_html/app/code/core/Mage/Core/Model/App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#13 /home/kidscove/public_html/app/Mage.php(683): Mage_Core_Model_App->run(Array)
+#14 /home/kidscove/public_html/index.php(83): Mage::run('', 'store')
+#15 {main}
+2017-07-27T19:52:46+00:00 ERR (3): 
+Mage_Core_Exception: Ongeldig bloktype: catalog.leftnav in /home/kidscove/public_html/app/Mage.php:595
+Stack trace:
+#0 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(495): Mage::throwException('Ongeldig blokty...')
+#1 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(437): Mage_Core_Model_Layout->_getBlockInstance('catalog.leftnav', Array)
+#2 /home/kidscove/public_html/app/code/local/Magentothem/Layerednavigationajax/controllers/CategoryController.php(60): Mage_Core_Model_Layout->createBlock('catalog.leftnav')
+#3 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(418): Magentothem_Layerednavigationajax_CategoryController->viewAction()
+#4 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('view')
+#5 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#6 /home/kidscove/public_html/app/code/core/Mage/Core/Model/App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#7 /home/kidscove/public_html/app/Mage.php(683): Mage_Core_Model_App->run(Array)
+#8 /home/kidscove/public_html/index.php(83): Mage::run('', 'store')
+#9 {main}
+2017-07-27T19:52:57+00:00 ERR (3): 
+Mage_Core_Exception: Ongeldig bloktype: Mage_Vmegamenu_Block_Vmegamenu in /home/kidscove/public_html/app/Mage.php:595
+Stack trace:
+#0 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(495): Mage::throwException('Ongeldig blokty...')
+#1 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(437): Mage_Core_Model_Layout->_getBlockInstance('Mage_Vmegamenu_...', Array)
+#2 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(472): Mage_Core_Model_Layout->createBlock('vmegamenu/vmega...', 'header.vmegamen...')
+#3 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(239): Mage_Core_Model_Layout->addBlock('vmegamenu/vmega...', 'header.vmegamen...')
+#4 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(205): Mage_Core_Model_Layout->_generateBlock(Object(Mage_Core_Model_Layout_Element), Object(Mage_Core_Model_Layout_Element))
+#5 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(206): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#6 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(206): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#7 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(344): Mage_Core_Model_Layout->generateBlocks()
+#8 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(269): Mage_Core_Controller_Varien_Action->generateLayoutBlocks()
+#9 /home/kidscove/public_html/app/code/local/Magentothem/Layerednavigationajax/controllers/ResultController.php(121): Mage_Core_Controller_Varien_Action->loadLayout()
+#10 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(418): Magentothem_Layerednavigationajax_ResultController->indexAction()
+#11 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('index')
+#12 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#13 /home/kidscove/public_html/app/code/core/Mage/Core/Model/App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#14 /home/kidscove/public_html/app/Mage.php(683): Mage_Core_Model_App->run(Array)
+#15 /home/kidscove/public_html/index.php(83): Mage::run('', 'store')
+#16 {main}
+2017-07-27T19:53:03+00:00 ERR (3): 
+Mage_Core_Exception: Ongeldig bloktype: Mage_Vmegamenu_Block_Vmegamenu in /home/kidscove/public_html/app/Mage.php:595
+Stack trace:
+#0 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(495): Mage::throwException('Ongeldig blokty...')
+#1 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(437): Mage_Core_Model_Layout->_getBlockInstance('Mage_Vmegamenu_...', Array)
+#2 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(472): Mage_Core_Model_Layout->createBlock('vmegamenu/vmega...', 'header.vmegamen...')
+#3 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(239): Mage_Core_Model_Layout->addBlock('vmegamenu/vmega...', 'header.vmegamen...')
+#4 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(205): Mage_Core_Model_Layout->_generateBlock(Object(Mage_Core_Model_Layout_Element), Object(Mage_Core_Model_Layout_Element))
+#5 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(206): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#6 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(206): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#7 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(344): Mage_Core_Model_Layout->generateBlocks()
+#8 /home/kidscove/public_html/app/code/local/Magentothem/Layerednavigationajax/controllers/CategoryController.php(59): Mage_Core_Controller_Varien_Action->generateLayoutBlocks()
+#9 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(418): Magentothem_Layerednavigationajax_CategoryController->viewAction()
+#10 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('view')
+#11 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#12 /home/kidscove/public_html/app/code/core/Mage/Core/Model/App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#13 /home/kidscove/public_html/app/Mage.php(683): Mage_Core_Model_App->run(Array)
+#14 /home/kidscove/public_html/index.php(83): Mage::run('', 'store')
+#15 {main}
+2017-07-27T19:53:03+00:00 ERR (3): 
+Mage_Core_Exception: Ongeldig bloktype: catalog.leftnav in /home/kidscove/public_html/app/Mage.php:595
+Stack trace:
+#0 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(495): Mage::throwException('Ongeldig blokty...')
+#1 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(437): Mage_Core_Model_Layout->_getBlockInstance('catalog.leftnav', Array)
+#2 /home/kidscove/public_html/app/code/local/Magentothem/Layerednavigationajax/controllers/CategoryController.php(60): Mage_Core_Model_Layout->createBlock('catalog.leftnav')
+#3 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(418): Magentothem_Layerednavigationajax_CategoryController->viewAction()
+#4 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('view')
+#5 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#6 /home/kidscove/public_html/app/code/core/Mage/Core/Model/App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#7 /home/kidscove/public_html/app/Mage.php(683): Mage_Core_Model_App->run(Array)
+#8 /home/kidscove/public_html/index.php(83): Mage::run('', 'store')
+#9 {main}
+2017-07-27T19:53:03+00:00 ERR (3): 
+Mage_Core_Exception: Ongeldig bloktype: Mage_Vmegamenu_Block_Vmegamenu in /home/kidscove/public_html/app/Mage.php:595
+Stack trace:
+#0 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(495): Mage::throwException('Ongeldig blokty...')
+#1 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(437): Mage_Core_Model_Layout->_getBlockInstance('Mage_Vmegamenu_...', Array)
+#2 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(472): Mage_Core_Model_Layout->createBlock('vmegamenu/vmega...', 'header.vmegamen...')
+#3 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(239): Mage_Core_Model_Layout->addBlock('vmegamenu/vmega...', 'header.vmegamen...')
+#4 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(205): Mage_Core_Model_Layout->_generateBlock(Object(Mage_Core_Model_Layout_Element), Object(Mage_Core_Model_Layout_Element))
+#5 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(206): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#6 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(206): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#7 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(344): Mage_Core_Model_Layout->generateBlocks()
+#8 /home/kidscove/public_html/app/code/local/Magentothem/Layerednavigationajax/controllers/CategoryController.php(59): Mage_Core_Controller_Varien_Action->generateLayoutBlocks()
+#9 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(418): Magentothem_Layerednavigationajax_CategoryController->viewAction()
+#10 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('view')
+#11 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#12 /home/kidscove/public_html/app/code/core/Mage/Core/Model/App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#13 /home/kidscove/public_html/app/Mage.php(683): Mage_Core_Model_App->run(Array)
+#14 /home/kidscove/public_html/index.php(83): Mage::run('', 'store')
+#15 {main}
+2017-07-27T19:53:03+00:00 ERR (3): 
+Mage_Core_Exception: Ongeldig bloktype: catalog.leftnav in /home/kidscove/public_html/app/Mage.php:595
+Stack trace:
+#0 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(495): Mage::throwException('Ongeldig blokty...')
+#1 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(437): Mage_Core_Model_Layout->_getBlockInstance('catalog.leftnav', Array)
+#2 /home/kidscove/public_html/app/code/local/Magentothem/Layerednavigationajax/controllers/CategoryController.php(60): Mage_Core_Model_Layout->createBlock('catalog.leftnav')
+#3 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(418): Magentothem_Layerednavigationajax_CategoryController->viewAction()
+#4 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('view')
+#5 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#6 /home/kidscove/public_html/app/code/core/Mage/Core/Model/App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#7 /home/kidscove/public_html/app/Mage.php(683): Mage_Core_Model_App->run(Array)
+#8 /home/kidscove/public_html/index.php(83): Mage::run('', 'store')
+#9 {main}
+2017-07-27T19:54:02+00:00 ERR (3): 
+Mage_Core_Exception: Ongeldig bloktype: Mage_Vmegamenu_Block_Vmegamenu in /home/kidscove/public_html/app/Mage.php:595
+Stack trace:
+#0 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(495): Mage::throwException('Ongeldig blokty...')
+#1 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(437): Mage_Core_Model_Layout->_getBlockInstance('Mage_Vmegamenu_...', Array)
+#2 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(472): Mage_Core_Model_Layout->createBlock('vmegamenu/vmega...', 'header.vmegamen...')
+#3 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(239): Mage_Core_Model_Layout->addBlock('vmegamenu/vmega...', 'header.vmegamen...')
+#4 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(205): Mage_Core_Model_Layout->_generateBlock(Object(Mage_Core_Model_Layout_Element), Object(Mage_Core_Model_Layout_Element))
+#5 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(206): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#6 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(206): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#7 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(344): Mage_Core_Model_Layout->generateBlocks()
+#8 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(269): Mage_Core_Controller_Varien_Action->generateLayoutBlocks()
+#9 /home/kidscove/public_html/app/code/local/Magentothem/Layerednavigationajax/controllers/ResultController.php(121): Mage_Core_Controller_Varien_Action->loadLayout()
+#10 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(418): Magentothem_Layerednavigationajax_ResultController->indexAction()
+#11 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('index')
+#12 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#13 /home/kidscove/public_html/app/code/core/Mage/Core/Model/App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#14 /home/kidscove/public_html/app/Mage.php(683): Mage_Core_Model_App->run(Array)
+#15 /home/kidscove/public_html/index.php(83): Mage::run('', 'store')
+#16 {main}
+2017-07-27T19:57:04+00:00 ERR (3): 
+Mage_Core_Exception: Ongeldig bloktype: Mage_Vmegamenu_Block_Vmegamenu in /home/kidscove/public_html/app/Mage.php:595
+Stack trace:
+#0 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(495): Mage::throwException('Ongeldig blokty...')
+#1 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(437): Mage_Core_Model_Layout->_getBlockInstance('Mage_Vmegamenu_...', Array)
+#2 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(472): Mage_Core_Model_Layout->createBlock('vmegamenu/vmega...', 'header.vmegamen...')
+#3 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(239): Mage_Core_Model_Layout->addBlock('vmegamenu/vmega...', 'header.vmegamen...')
+#4 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(205): Mage_Core_Model_Layout->_generateBlock(Object(Mage_Core_Model_Layout_Element), Object(Mage_Core_Model_Layout_Element))
+#5 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(206): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#6 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(206): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#7 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(344): Mage_Core_Model_Layout->generateBlocks()
+#8 /home/kidscove/public_html/app/code/local/Magentothem/Layerednavigationajax/controllers/CategoryController.php(59): Mage_Core_Controller_Varien_Action->generateLayoutBlocks()
+#9 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(418): Magentothem_Layerednavigationajax_CategoryController->viewAction()
+#10 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('view')
+#11 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#12 /home/kidscove/public_html/app/code/core/Mage/Core/Model/App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#13 /home/kidscove/public_html/app/Mage.php(683): Mage_Core_Model_App->run(Array)
+#14 /home/kidscove/public_html/index.php(83): Mage::run('', 'store')
+#15 {main}
+2017-07-27T19:57:04+00:00 ERR (3): 
+Mage_Core_Exception: Ongeldig bloktype: Mage_Vmegamenu_Block_Vmegamenu in /home/kidscove/public_html/app/Mage.php:595
+Stack trace:
+#0 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(495): Mage::throwException('Ongeldig blokty...')
+#1 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(437): Mage_Core_Model_Layout->_getBlockInstance('Mage_Vmegamenu_...', Array)
+#2 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(472): Mage_Core_Model_Layout->createBlock('vmegamenu/vmega...', 'header.vmegamen...')
+#3 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(239): Mage_Core_Model_Layout->addBlock('vmegamenu/vmega...', 'header.vmegamen...')
+#4 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(205): Mage_Core_Model_Layout->_generateBlock(Object(Mage_Core_Model_Layout_Element), Object(Mage_Core_Model_Layout_Element))
+#5 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(206): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#6 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(206): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#7 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(344): Mage_Core_Model_Layout->generateBlocks()
+#8 /home/kidscove/public_html/app/code/local/Magentothem/Layerednavigationajax/controllers/CategoryController.php(59): Mage_Core_Controller_Varien_Action->generateLayoutBlocks()
+#9 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(418): Magentothem_Layerednavigationajax_CategoryController->viewAction()
+#10 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('view')
+#11 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#12 /home/kidscove/public_html/app/code/core/Mage/Core/Model/App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#13 /home/kidscove/public_html/app/Mage.php(683): Mage_Core_Model_App->run(Array)
+#14 /home/kidscove/public_html/index.php(83): Mage::run('', 'store')
+#15 {main}
+2017-07-27T19:57:18+00:00 ERR (3): 
+Mage_Core_Exception: Ongeldig bloktype: Mage_Vmegamenu_Block_Vmegamenu in /home/kidscove/public_html/app/Mage.php:595
+Stack trace:
+#0 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(495): Mage::throwException('Ongeldig blokty...')
+#1 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(437): Mage_Core_Model_Layout->_getBlockInstance('Mage_Vmegamenu_...', Array)
+#2 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(472): Mage_Core_Model_Layout->createBlock('vmegamenu/vmega...', 'header.vmegamen...')
+#3 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(239): Mage_Core_Model_Layout->addBlock('vmegamenu/vmega...', 'header.vmegamen...')
+#4 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(205): Mage_Core_Model_Layout->_generateBlock(Object(Mage_Core_Model_Layout_Element), Object(Mage_Core_Model_Layout_Element))
+#5 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(206): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#6 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(206): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#7 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(344): Mage_Core_Model_Layout->generateBlocks()
+#8 /home/kidscove/public_html/app/code/local/Magentothem/Layerednavigationajax/controllers/CategoryController.php(118): Mage_Core_Controller_Varien_Action->generateLayoutBlocks()
+#9 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(418): Magentothem_Layerednavigationajax_CategoryController->viewAction()
+#10 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('view')
+#11 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#12 /home/kidscove/public_html/app/code/core/Mage/Core/Model/App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#13 /home/kidscove/public_html/app/Mage.php(683): Mage_Core_Model_App->run(Array)
+#14 /home/kidscove/public_html/index.php(83): Mage::run('', 'store')
+#15 {main}
+2017-07-27T19:57:26+00:00 ERR (3): 
+Mage_Core_Exception: Ongeldig bloktype: Mage_Vmegamenu_Block_Vmegamenu in /home/kidscove/public_html/app/Mage.php:595
+Stack trace:
+#0 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(495): Mage::throwException('Ongeldig blokty...')
+#1 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(437): Mage_Core_Model_Layout->_getBlockInstance('Mage_Vmegamenu_...', Array)
+#2 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(472): Mage_Core_Model_Layout->createBlock('vmegamenu/vmega...', 'header.vmegamen...')
+#3 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(239): Mage_Core_Model_Layout->addBlock('vmegamenu/vmega...', 'header.vmegamen...')
+#4 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(205): Mage_Core_Model_Layout->_generateBlock(Object(Mage_Core_Model_Layout_Element), Object(Mage_Core_Model_Layout_Element))
+#5 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(206): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#6 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(206): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#7 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(344): Mage_Core_Model_Layout->generateBlocks()
+#8 /home/kidscove/public_html/app/code/local/Magentothem/Layerednavigationajax/controllers/CategoryController.php(59): Mage_Core_Controller_Varien_Action->generateLayoutBlocks()
+#9 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(418): Magentothem_Layerednavigationajax_CategoryController->viewAction()
+#10 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('view')
+#11 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#12 /home/kidscove/public_html/app/code/core/Mage/Core/Model/App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#13 /home/kidscove/public_html/app/Mage.php(683): Mage_Core_Model_App->run(Array)
+#14 /home/kidscove/public_html/index.php(83): Mage::run('', 'store')
+#15 {main}
+2017-07-27T19:57:26+00:00 ERR (3): 
+Mage_Core_Exception: Ongeldig bloktype: Mage_Vmegamenu_Block_Vmegamenu in /home/kidscove/public_html/app/Mage.php:595
+Stack trace:
+#0 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(495): Mage::throwException('Ongeldig blokty...')
+#1 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(437): Mage_Core_Model_Layout->_getBlockInstance('Mage_Vmegamenu_...', Array)
+#2 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(472): Mage_Core_Model_Layout->createBlock('vmegamenu/vmega...', 'header.vmegamen...')
+#3 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(239): Mage_Core_Model_Layout->addBlock('vmegamenu/vmega...', 'header.vmegamen...')
+#4 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(205): Mage_Core_Model_Layout->_generateBlock(Object(Mage_Core_Model_Layout_Element), Object(Mage_Core_Model_Layout_Element))
+#5 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(206): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#6 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(206): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#7 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(344): Mage_Core_Model_Layout->generateBlocks()
+#8 /home/kidscove/public_html/app/code/local/Magentothem/Layerednavigationajax/controllers/CategoryController.php(59): Mage_Core_Controller_Varien_Action->generateLayoutBlocks()
+#9 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(418): Magentothem_Layerednavigationajax_CategoryController->viewAction()
+#10 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('view')
+#11 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#12 /home/kidscove/public_html/app/code/core/Mage/Core/Model/App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#13 /home/kidscove/public_html/app/Mage.php(683): Mage_Core_Model_App->run(Array)
+#14 /home/kidscove/public_html/index.php(83): Mage::run('', 'store')
+#15 {main}
+2017-07-27T19:57:50+00:00 ERR (3): 
+Mage_Core_Exception: Ongeldig bloktype: Mage_Vmegamenu_Block_Vmegamenu in /home/kidscove/public_html/app/Mage.php:595
+Stack trace:
+#0 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(495): Mage::throwException('Ongeldig blokty...')
+#1 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(437): Mage_Core_Model_Layout->_getBlockInstance('Mage_Vmegamenu_...', Array)
+#2 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(472): Mage_Core_Model_Layout->createBlock('vmegamenu/vmega...', 'header.vmegamen...')
+#3 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(239): Mage_Core_Model_Layout->addBlock('vmegamenu/vmega...', 'header.vmegamen...')
+#4 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(205): Mage_Core_Model_Layout->_generateBlock(Object(Mage_Core_Model_Layout_Element), Object(Mage_Core_Model_Layout_Element))
+#5 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(206): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#6 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(206): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#7 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(344): Mage_Core_Model_Layout->generateBlocks()
+#8 /home/kidscove/public_html/app/code/core/Mage/Cms/Helper/Page.php(113): Mage_Core_Controller_Varien_Action->generateLayoutBlocks()
+#9 /home/kidscove/public_html/app/code/core/Mage/Cms/Helper/Page.php(52): Mage_Cms_Helper_Page->_renderPage(Object(Mage_Cms_IndexController), 'home')
+#10 /home/kidscove/public_html/app/code/core/Mage/Cms/controllers/IndexController.php(45): Mage_Cms_Helper_Page->renderPage(Object(Mage_Cms_IndexController), 'home')
+#11 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(418): Mage_Cms_IndexController->indexAction()
+#12 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('index')
+#13 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#14 /home/kidscove/public_html/app/code/core/Mage/Core/Model/App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#15 /home/kidscove/public_html/app/Mage.php(683): Mage_Core_Model_App->run(Array)
+#16 /home/kidscove/public_html/index.php(83): Mage::run('', 'store')
+#17 {main}
+2017-07-27T19:57:59+00:00 ERR (3): 
+Mage_Core_Exception: Ongeldig bloktype: Mage_Vmegamenu_Block_Vmegamenu in /home/kidscove/public_html/app/Mage.php:595
+Stack trace:
+#0 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(495): Mage::throwException('Ongeldig blokty...')
+#1 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(437): Mage_Core_Model_Layout->_getBlockInstance('Mage_Vmegamenu_...', Array)
+#2 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(472): Mage_Core_Model_Layout->createBlock('vmegamenu/vmega...', 'header.vmegamen...')
+#3 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(239): Mage_Core_Model_Layout->addBlock('vmegamenu/vmega...', 'header.vmegamen...')
+#4 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(205): Mage_Core_Model_Layout->_generateBlock(Object(Mage_Core_Model_Layout_Element), Object(Mage_Core_Model_Layout_Element))
+#5 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(206): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#6 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(206): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#7 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(344): Mage_Core_Model_Layout->generateBlocks()
+#8 /home/kidscove/public_html/app/code/local/Magentothem/Layerednavigationajax/controllers/CategoryController.php(59): Mage_Core_Controller_Varien_Action->generateLayoutBlocks()
+#9 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(418): Magentothem_Layerednavigationajax_CategoryController->viewAction()
+#10 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('view')
+#11 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#12 /home/kidscove/public_html/app/code/core/Mage/Core/Model/App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#13 /home/kidscove/public_html/app/Mage.php(683): Mage_Core_Model_App->run(Array)
+#14 /home/kidscove/public_html/index.php(83): Mage::run('', 'store')
+#15 {main}
+2017-07-27T19:57:59+00:00 ERR (3): 
+Mage_Core_Exception: Ongeldig bloktype: Mage_Vmegamenu_Block_Vmegamenu in /home/kidscove/public_html/app/Mage.php:595
+Stack trace:
+#0 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(495): Mage::throwException('Ongeldig blokty...')
+#1 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(437): Mage_Core_Model_Layout->_getBlockInstance('Mage_Vmegamenu_...', Array)
+#2 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(472): Mage_Core_Model_Layout->createBlock('vmegamenu/vmega...', 'header.vmegamen...')
+#3 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(239): Mage_Core_Model_Layout->addBlock('vmegamenu/vmega...', 'header.vmegamen...')
+#4 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(205): Mage_Core_Model_Layout->_generateBlock(Object(Mage_Core_Model_Layout_Element), Object(Mage_Core_Model_Layout_Element))
+#5 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(206): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#6 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(206): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#7 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(344): Mage_Core_Model_Layout->generateBlocks()
+#8 /home/kidscove/public_html/app/code/local/Magentothem/Layerednavigationajax/controllers/CategoryController.php(59): Mage_Core_Controller_Varien_Action->generateLayoutBlocks()
+#9 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(418): Magentothem_Layerednavigationajax_CategoryController->viewAction()
+#10 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('view')
+#11 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#12 /home/kidscove/public_html/app/code/core/Mage/Core/Model/App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#13 /home/kidscove/public_html/app/Mage.php(683): Mage_Core_Model_App->run(Array)
+#14 /home/kidscove/public_html/index.php(83): Mage::run('', 'store')
+#15 {main}
+2017-07-27T19:58:02+00:00 ERR (3): 
+Mage_Core_Exception: Ongeldig bloktype: Mage_Vmegamenu_Block_Vmegamenu in /home/kidscove/public_html/app/Mage.php:595
+Stack trace:
+#0 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(495): Mage::throwException('Ongeldig blokty...')
+#1 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(437): Mage_Core_Model_Layout->_getBlockInstance('Mage_Vmegamenu_...', Array)
+#2 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(472): Mage_Core_Model_Layout->createBlock('vmegamenu/vmega...', 'header.vmegamen...')
+#3 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(239): Mage_Core_Model_Layout->addBlock('vmegamenu/vmega...', 'header.vmegamen...')
+#4 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(205): Mage_Core_Model_Layout->_generateBlock(Object(Mage_Core_Model_Layout_Element), Object(Mage_Core_Model_Layout_Element))
+#5 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(206): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#6 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(206): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#7 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(344): Mage_Core_Model_Layout->generateBlocks()
+#8 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(269): Mage_Core_Controller_Varien_Action->generateLayoutBlocks()
+#9 /home/kidscove/public_html/app/code/local/Magentothem/Layerednavigationajax/controllers/ResultController.php(121): Mage_Core_Controller_Varien_Action->loadLayout()
+#10 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(418): Magentothem_Layerednavigationajax_ResultController->indexAction()
+#11 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('index')
+#12 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#13 /home/kidscove/public_html/app/code/core/Mage/Core/Model/App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#14 /home/kidscove/public_html/app/Mage.php(683): Mage_Core_Model_App->run(Array)
+#15 /home/kidscove/public_html/index.php(83): Mage::run('', 'store')
+#16 {main}
+2017-07-27T19:58:33+00:00 ERR (3): 
+Mage_Core_Exception: Ongeldig bloktype: Mage_Vmegamenu_Block_Vmegamenu in /home/kidscove/public_html/app/Mage.php:595
+Stack trace:
+#0 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(495): Mage::throwException('Ongeldig blokty...')
+#1 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(437): Mage_Core_Model_Layout->_getBlockInstance('Mage_Vmegamenu_...', Array)
+#2 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(472): Mage_Core_Model_Layout->createBlock('vmegamenu/vmega...', 'header.vmegamen...')
+#3 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(239): Mage_Core_Model_Layout->addBlock('vmegamenu/vmega...', 'header.vmegamen...')
+#4 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(205): Mage_Core_Model_Layout->_generateBlock(Object(Mage_Core_Model_Layout_Element), Object(Mage_Core_Model_Layout_Element))
+#5 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(206): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#6 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(206): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#7 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(344): Mage_Core_Model_Layout->generateBlocks()
+#8 /home/kidscove/public_html/app/code/local/Magentothem/Layerednavigationajax/controllers/CategoryController.php(118): Mage_Core_Controller_Varien_Action->generateLayoutBlocks()
+#9 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(418): Magentothem_Layerednavigationajax_CategoryController->viewAction()
+#10 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('view')
+#11 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#12 /home/kidscove/public_html/app/code/core/Mage/Core/Model/App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#13 /home/kidscove/public_html/app/Mage.php(683): Mage_Core_Model_App->run(Array)
+#14 /home/kidscove/public_html/index.php(83): Mage::run('', 'store')
+#15 {main}
+2017-07-27T19:58:43+00:00 ERR (3): 
+Mage_Core_Exception: Ongeldig bloktype: Mage_Vmegamenu_Block_Vmegamenu in /home/kidscove/public_html/app/Mage.php:595
+Stack trace:
+#0 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(495): Mage::throwException('Ongeldig blokty...')
+#1 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(437): Mage_Core_Model_Layout->_getBlockInstance('Mage_Vmegamenu_...', Array)
+#2 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(472): Mage_Core_Model_Layout->createBlock('vmegamenu/vmega...', 'header.vmegamen...')
+#3 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(239): Mage_Core_Model_Layout->addBlock('vmegamenu/vmega...', 'header.vmegamen...')
+#4 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(205): Mage_Core_Model_Layout->_generateBlock(Object(Mage_Core_Model_Layout_Element), Object(Mage_Core_Model_Layout_Element))
+#5 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(206): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#6 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(206): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#7 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(344): Mage_Core_Model_Layout->generateBlocks()
+#8 /home/kidscove/public_html/app/code/local/Magentothem/Layerednavigationajax/controllers/CategoryController.php(118): Mage_Core_Controller_Varien_Action->generateLayoutBlocks()
+#9 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(418): Magentothem_Layerednavigationajax_CategoryController->viewAction()
+#10 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('view')
+#11 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#12 /home/kidscove/public_html/app/code/core/Mage/Core/Model/App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#13 /home/kidscove/public_html/app/Mage.php(683): Mage_Core_Model_App->run(Array)
+#14 /home/kidscove/public_html/index.php(83): Mage::run('', 'store')
+#15 {main}
+2017-07-27T19:58:54+00:00 ERR (3): 
+Mage_Core_Exception: Ongeldig bloktype: Mage_Vmegamenu_Block_Vmegamenu in /home/kidscove/public_html/app/Mage.php:595
+Stack trace:
+#0 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(495): Mage::throwException('Ongeldig blokty...')
+#1 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(437): Mage_Core_Model_Layout->_getBlockInstance('Mage_Vmegamenu_...', Array)
+#2 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(472): Mage_Core_Model_Layout->createBlock('vmegamenu/vmega...', 'header.vmegamen...')
+#3 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(239): Mage_Core_Model_Layout->addBlock('vmegamenu/vmega...', 'header.vmegamen...')
+#4 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(205): Mage_Core_Model_Layout->_generateBlock(Object(Mage_Core_Model_Layout_Element), Object(Mage_Core_Model_Layout_Element))
+#5 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(206): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#6 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(206): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#7 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(344): Mage_Core_Model_Layout->generateBlocks()
+#8 /home/kidscove/public_html/app/code/core/Mage/Cms/Helper/Page.php(113): Mage_Core_Controller_Varien_Action->generateLayoutBlocks()
+#9 /home/kidscove/public_html/app/code/core/Mage/Cms/Helper/Page.php(52): Mage_Cms_Helper_Page->_renderPage(Object(Mage_Cms_IndexController), 'home')
+#10 /home/kidscove/public_html/app/code/core/Mage/Cms/controllers/IndexController.php(45): Mage_Cms_Helper_Page->renderPage(Object(Mage_Cms_IndexController), 'home')
+#11 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(418): Mage_Cms_IndexController->indexAction()
+#12 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('index')
+#13 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#14 /home/kidscove/public_html/app/code/core/Mage/Core/Model/App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#15 /home/kidscove/public_html/app/Mage.php(683): Mage_Core_Model_App->run(Array)
+#16 /home/kidscove/public_html/index.php(83): Mage::run('', 'store')
+#17 {main}
+2017-07-27T19:59:23+00:00 ERR (3): 
+Mage_Core_Exception: Ongeldig bloktype: Mage_Vmegamenu_Block_Vmegamenu in /home/kidscove/public_html/app/Mage.php:595
+Stack trace:
+#0 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(495): Mage::throwException('Ongeldig blokty...')
+#1 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(437): Mage_Core_Model_Layout->_getBlockInstance('Mage_Vmegamenu_...', Array)
+#2 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(472): Mage_Core_Model_Layout->createBlock('vmegamenu/vmega...', 'header.vmegamen...')
+#3 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(239): Mage_Core_Model_Layout->addBlock('vmegamenu/vmega...', 'header.vmegamen...')
+#4 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(205): Mage_Core_Model_Layout->_generateBlock(Object(Mage_Core_Model_Layout_Element), Object(Mage_Core_Model_Layout_Element))
+#5 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(206): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#6 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(206): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#7 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(344): Mage_Core_Model_Layout->generateBlocks()
+#8 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(269): Mage_Core_Controller_Varien_Action->generateLayoutBlocks()
+#9 /home/kidscove/public_html/app/code/local/Magentothem/Layerednavigationajax/controllers/ResultController.php(121): Mage_Core_Controller_Varien_Action->loadLayout()
+#10 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(418): Magentothem_Layerednavigationajax_ResultController->indexAction()
+#11 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('index')
+#12 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#13 /home/kidscove/public_html/app/code/core/Mage/Core/Model/App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#14 /home/kidscove/public_html/app/Mage.php(683): Mage_Core_Model_App->run(Array)
+#15 /home/kidscove/public_html/index.php(83): Mage::run('', 'store')
+#16 {main}
+2017-07-27T20:00:03+00:00 ERR (3): 
+Mage_Core_Exception: Ongeldig bloktype: Mage_Vmegamenu_Block_Vmegamenu in /home/kidscove/public_html/app/Mage.php:595
+Stack trace:
+#0 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(495): Mage::throwException('Ongeldig blokty...')
+#1 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(437): Mage_Core_Model_Layout->_getBlockInstance('Mage_Vmegamenu_...', Array)
+#2 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(472): Mage_Core_Model_Layout->createBlock('vmegamenu/vmega...', 'header.vmegamen...')
+#3 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(239): Mage_Core_Model_Layout->addBlock('vmegamenu/vmega...', 'header.vmegamen...')
+#4 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(205): Mage_Core_Model_Layout->_generateBlock(Object(Mage_Core_Model_Layout_Element), Object(Mage_Core_Model_Layout_Element))
+#5 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(206): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#6 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(206): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#7 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(344): Mage_Core_Model_Layout->generateBlocks()
+#8 /home/kidscove/public_html/app/code/local/Magentothem/Layerednavigationajax/controllers/CategoryController.php(118): Mage_Core_Controller_Varien_Action->generateLayoutBlocks()
+#9 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(418): Magentothem_Layerednavigationajax_CategoryController->viewAction()
+#10 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('view')
+#11 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#12 /home/kidscove/public_html/app/code/core/Mage/Core/Model/App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#13 /home/kidscove/public_html/app/Mage.php(683): Mage_Core_Model_App->run(Array)
+#14 /home/kidscove/public_html/index.php(83): Mage::run('', 'store')
+#15 {main}
+2017-07-27T20:01:21+00:00 ERR (3): 
+Mage_Core_Exception: Ongeldig bloktype: Mage_Vmegamenu_Block_Vmegamenu in /home/kidscove/public_html/app/Mage.php:595
+Stack trace:
+#0 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(495): Mage::throwException('Ongeldig blokty...')
+#1 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(437): Mage_Core_Model_Layout->_getBlockInstance('Mage_Vmegamenu_...', Array)
+#2 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(472): Mage_Core_Model_Layout->createBlock('vmegamenu/vmega...', 'header.vmegamen...')
+#3 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(239): Mage_Core_Model_Layout->addBlock('vmegamenu/vmega...', 'header.vmegamen...')
+#4 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(205): Mage_Core_Model_Layout->_generateBlock(Object(Mage_Core_Model_Layout_Element), Object(Mage_Core_Model_Layout_Element))
+#5 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(206): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#6 /home/kidscove/public_html/app/code/core/Mage/Core/Model/Layout.php(206): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#7 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(344): Mage_Core_Model_Layout->generateBlocks()
+#8 /home/kidscove/public_html/app/code/core/Mage/Cms/Helper/Page.php(113): Mage_Core_Controller_Varien_Action->generateLayoutBlocks()
+#9 /home/kidscove/public_html/app/code/core/Mage/Cms/Helper/Page.php(52): Mage_Cms_Helper_Page->_renderPage(Object(Mage_Cms_IndexController), 'no-route')
+#10 /home/kidscove/public_html/app/code/core/Mage/Cms/controllers/IndexController.php(75): Mage_Cms_Helper_Page->renderPage(Object(Mage_Cms_IndexController), 'no-route')
+#11 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Action.php(418): Mage_Cms_IndexController->noRouteAction()
+#12 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('noRoute')
+#13 /home/kidscove/public_html/app/code/core/Mage/Core/Controller/Varien/Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#14 /home/kidscove/public_html/app/code/core/Mage/Core/Model/App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#15 /home/kidscove/public_html/app/Mage.php(683): Mage_Core_Model_App->run(Array)
+#16 /home/kidscove/public_html/index.php(83): Mage::run('', 'store')
+#17 {main}

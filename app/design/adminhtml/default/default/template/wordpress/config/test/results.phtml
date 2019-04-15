@@ -1,0 +1,64 @@
+<?php
+/**
+  *
+  *
+  */
+?>
+<?php if ($this->getRequest()->getParam('section') == 'wordpress' && $this->isAclValid() && Mage::helper('wordpress')->isEnabled()): ?>
+	<?php if ($results = $this->getChildHtml('wp_test_results')): ?>
+		<div class="content-header">
+			<table cellspacing="0">
+				<tbody>
+					<tr>
+						<td>
+							<h3><?php echo $this->__('WordPress Integration') ?></h3>
+						</td>
+						<td class="form-buttons">
+							<p style="font-size: 1.1em; line-height: 1.25em; margin: 0.3em 0.5em 0 0;font-weight:bold;">
+							<?php if ($this->helper('wordpress/system')->integrationHasErrors()): ?>
+								<a href="http://fishpig.co.uk/wordpress-integration-setup.html?<?php echo urlencode('utm_source=magento&utm_medium=message&utm_campaign=wp-int-test-results') ?>" target="_blank"><span style="color:#000;"><?php echo $this->__('WordPress Integration Setup Help') ?></span></a>
+							<?php else: ?>
+								Like WordPress Integration? <a href="http://fishpig.co.uk/wordpress-integration.html?<?php echo urlencode('utm_source=magento&utm_medium=message&utm_campaign=wp-int-test-results') ?>#reviews" target="_blank"><span style="color:#000;">Leave a quick review</span></a>.
+							<?php endif; ?>
+							</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div id="fp-integration-test-results" style="margin-bottom:20px;">
+			<?php echo $results ?>
+		</div>
+		<script type="text/javascript">
+			//<![CDATA[
+			
+				(function() {
+					var WP_VERSION = '<?php echo Mage::helper('wordpress/system')->getExtensionVersion() ?>';
+					
+					try {
+						var ifm = new Element('iframe', {
+							'id': 'wp-int-upgrade-frame',
+							'style': 'display: none;',
+							'src': '<?php echo $this->getUrl('adminhtml/wordpress/checkVersion') ?>'
+						});
+						
+						$('fp-integration-test-results').insert(ifm);
+					
+						ifm.observe('load', function(event) {
+							var versions = (ifm.contentDocument || ifm.contentWindow.document)
+								.getElementsByTagName('v');
+								
+							if (versions.length > 0) {
+								if (versions[versions.length-1].innerHTML.trim() != WP_VERSION) {
+									$('wp-<?php echo md5('Upgrade Extension') ?>').up('tr').show();
+								}
+							}
+						}.bindAsEventListener(this));
+					}
+					catch (e) {}
+				})();
+			
+			//]]>
+		</script>
+	<?php endif; ?>
+<?php endif; ?>

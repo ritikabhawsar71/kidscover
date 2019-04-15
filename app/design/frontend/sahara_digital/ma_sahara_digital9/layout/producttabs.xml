@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+    </default>
+    <cms_index_index>
+        <reference name="head">  
+		</reference>
+
+		<reference name="left">
+			<block type="producttabs/producttabs" name="producttabs" as="producttabs" template="magentothem/producttabs/producttabs.phtml"/>
+		</reference>
+
+	</cms_index_index>
+
+</layout> 
